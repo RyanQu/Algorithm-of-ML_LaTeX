@@ -250,14 +250,13 @@ There are 4 section in the Lecture 1:
             }
 
             \begin{center}{
-                Should have a colorful imgae hear.
-                % TODO
-                \includegraphics[scale=0.5]{k-means.jpg}
+                
+                \includegraphics{classification.png}
             }
             \end{center}
 
-            The true classification is $f$, and the classes are $C_1, C_2,$ and $C_3$, which are painted in red, green and blue. Supposed that we don't know the true classification.\\
-            The estimated classification is \(\hat{f}\), and the classes are $R_1, R_2,$ and $R_3$.\\
+            The true classification is $f$, and the classes are $C_1, C_2,$ and $C_3$, which are divided by line and painted in red, green and blue. Supposed that we don't know the true classification.\\
+            The estimated classification is \(\hat{f}\), and the classes are $R_1, R_2,$ and $R_3$, divided by dotted line.\\
             The mistake area, painted by gray, is the difference between estimation and true classification.\\
             Loss function abstract the size of mistake area.\\
 
@@ -272,7 +271,11 @@ There are 4 section in the Lecture 1:
             Empirical error/misclassification rate: \[\frac{Number\;of\;misclassified\;data}{Total\;data\;number}\]
 
             \paragraph{Loss matrix}{
-                % TODO
+                To show the cost of error in a matrix.
+                \begin{center}{
+                    \includegraphics[scale=0.5]{lossmatrix.png}
+                }
+                \end{center}
             }
 
         }
@@ -308,8 +311,57 @@ There are 4 section in the Lecture 1:
 }
 
 \section{Bayesian Decision Rule}{
-    hello, world
-    % TODO
+    \paragraph{Bayes Law:}{
+        For Event $A$ and Event $B$
+        \[0 \le P[A] \le 1, 0 \le P[B] \le 1 \]
+
+        \begin{center}{
+            ($A$ and $B$: $A \cap B$, $A$ or $B$: $A \cup B$, not $A$: $\bar{A}$ or $A^*$)
+        }
+        \end{center}
+
+        \begin{center}{
+            \includegraphics[scale=0.5]{bayes.png}
+        }
+        \end{center}
+
+        If,
+        \begin{equation}
+            A \cap B \neq \emptyset, 
+        \end{equation}
+        
+        So, according to (1),
+        \begin{equation}
+            P[A|B]= \frac{P[A \cap B]}{P[B]} \Rightarrow P[A \cap B] = P[A|B] \times P[B],
+        \end{equation}
+
+        And, the same with (2),
+        \begin{equation}
+            P[B|A]= \frac{P[B \cap A]}{P[A]} \Rightarrow P[B \cap A] = P[B|A] \times P[A]
+        \end{equation}
+
+        Obviously, we have,
+        \begin{equation}
+            P[A|B]P[B] = P[B|A]P[A]
+        \end{equation}
+
+        So,  
+        \[P[A|B] = \frac{P[B|A] \times P[A]}{P[B]}\]
+        \[P[B|A] = \frac{P[A|B] \times P[B]}{P[A]}\]
+
+        \paragraph{e.g.}{
+            If, a partition of $A$,
+            \begin{center}{
+                \includegraphics[scale=0.5]{bayes-eg.png}
+            }
+            \end{center}
+
+            \[A_1 \cup A_2 \cup A_3 \cup A_4 = S, A_i \cap A_j = \emptyset, i,j=1,2,3,4\]
+            So,
+            \[P[B] = \sum_{i=1}^{4}P[B|A_i]P[A_i]\]
+        }
+
+    }
 }
 
 %give a one paragraph short description of the topics
