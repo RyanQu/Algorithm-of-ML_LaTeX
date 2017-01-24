@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  24 JAN 2017 00:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  24 JAN 2017 00:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -542,7 +542,7 @@ urm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler
 /eurm5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/eule
 r/eurm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/eul
 er/eusm10.pfb>
-Output written on test.pdf (9 pages, 392296 bytes).
+Output written on test.pdf (9 pages, 392313 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
