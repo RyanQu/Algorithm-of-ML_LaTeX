@@ -54,7 +54,20 @@
 \begin{enumerate}
     \item Review Bayes Theory(Lecture 1) 
     \item Random Variable and Distribution
+        \begin{enumerate}
+            \item Random Variable
+            \item Distribution Function
+            \item Discrete Distribution
+            \item Continuous Distribution
+        \end{enumerate}
     \item Multivariate Distributions
+        \begin{enumerate}
+            \item Random Vector
+            \item Discrete Multivariate Distribution
+            \item Binormal Distribution
+            \item Marginal Distribution
+            \item Conditional Distribution
+        \end{enumerate}
     \item Bayes Classification
 \end{enumerate}
 
@@ -79,12 +92,12 @@ See notes in "Lecture 1".
             \begin{enumerate}{
                 \item For Discrete:
                     \begin{center}{
-                        \includegraphics{discreterv.png}
+                        \includegraphics[scale=0.3]{dis-cdf.png}
                     }
                     \end{center} 
                 \item For Continuous:
                     \begin{center}{
-                        \includegraphics{cdf.png}
+                        \includegraphics[scale=0.3]{con-cdf.png}
                     }
                     \end{center}  
             }
@@ -99,7 +112,7 @@ See notes in "Lecture 1".
                 \item For Discrete:
                     \[ x: F_x(t)= P_r[x= t] \]
                     \begin{center}{
-                        \includegraphics{discretepdf.png}
+                        \includegraphics[scale=0.3]{dis-pdf.jpg}
                     }
                     \end{center}
                 \item For Continuous: 
@@ -111,7 +124,7 @@ See notes in "Lecture 1".
                     \end{enumerate}
 
                     \begin{center}{
-                        \includegraphics{continupdf.png}
+                        \includegraphics[scale=0.3]{con-pdf.jpg}
                     }
                     \end{center}
             }
@@ -123,11 +136,11 @@ See notes in "Lecture 1".
         \subsubsection{Discrete Uniform Distribution}{
             \[ x: 1,2,3, \cdots, k\]
             \[ pdf: u_x(t)= \begin{cases} 
-                \frac{1}{n}, & \text{if } t=1, 2,  \cdots, h \\
+                \frac{1}{n}, & \text{if } t=1, 2,  \cdots, n \\
                 0, & \text{otherwise} 
             \end{cases}\]
             \begin{center}{
-                \includegraphics[scale=0.25]{Dis_Uniform_distribution_CDF.png}\includegraphics[scale=0.25]{Dis_Uniform_distribution_pmf.png}
+                \includegraphics[scale=0.25]{Dis_Uniform_distribution_pdf.png}\includegraphics[scale=0.25]{Dis_Uniform_distribution_CDF.png}
             }
             \end{center}
         }
@@ -140,19 +153,18 @@ See notes in "Lecture 1".
 
             \[CDF: F_x(t)= \begin{cases} 
                 0, & x \leqslant 0 \\ 
-                1-p, & 0 \leqslant x \leqslant 1 \\
-                0, & \text{otherwise}
+                1-p, & 0 \leqslant x < 1 \\
+                0, & x \geqslant 1
             \end{cases}\]
         }
-    }
-           
-\subsection{Bernoulli Distribution}             	
-	
+        \subsubsection{Binomial Distribution}{
+            numbers of 0's in independent Bernoulli trial with $P[0]= p$
+            \\pdf: $b(t| p, n)= {n \choose t}p^t (1-p)^{n-t}$
+            \\CDF: $B(t| p, n)= \sum_{n=0}^t b(t| p, n)$
+        }
+    }	
 
-\subsection{Binomial Distribution} 
-	numbers of 0's in independent Bernoulli trial with $P_r[0]= P$
-	\\P.D.F: $b(t| p, n)= {n \choose t}p^t (1-p)^{n-t}$
-	\\C.D.F: $B(t| p, n)= \sum_{n=0}^t b(t| p, n)$
+
 	
 \subsection{Continuous Uniform} 		
 	$ u(t| a, b)= \begin{cases} \frac{1}{b-a}  & a \le t \le b \\ 
