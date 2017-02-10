@@ -32,7 +32,7 @@
 \pagestyle{fancy}
 \lhead{
     {\bf Scribe:}{Chien-Ming Huang }
-    {\bf Edit:}{Yuan QU}\\
+    {\bf Edit:}{Yuan Qu}\\
     {\bf Lecture 2}
 } %insert lecture number
 \rhead{
@@ -146,7 +146,6 @@ See notes in "Lecture 1".
             \end{enumerate}  
         }
     }
-
     \subsection{Discrete Distribution}{
         \subsubsection{Discrete Uniform Distribution}{
             \[ x: 1,2,3, \cdots, k\]
@@ -174,23 +173,25 @@ See notes in "Lecture 1".
         }
         \subsubsection{Binomial Distribution}{
             numbers of 0's in independent Bernoulli trial with $P[0]= p$
-            \\pdf: $b(t| p, n)= {n \choose t}p^t (1-p)^{n-t}$
-            \\CDF: $B(t| p, n)= \sum_{n=0}^t b(t| p, n)$
+            \[\text{pdf: } b(t| p, n)= {n \choose t}p^t (1-p)^{n-t}, \text{ } {n \choose t}=\frac{n!}{t!(n-t)!}\]
+            \[\text{CDF: } B(t| p, n)= \sum_{n=0}^t b(t| p, n)\]
         }
-    }	
+    }
+    \subsection{Continuous distribution}{
+        \subsubsection{Continuous uniform}{
+            $ u(t| a, b)= \begin{cases} \frac{1}{b-a}  & a \le t \le b \\ 
+            0& \text{otherwise} \end{cases}$
+        }
+        \subsubsection{Normal Random}{
+            $mean= \mu $ and $std.= \sigma $
+            \\P.D.F: $\phi(t| \mu, \sigma)= \frac{1}{\sqrt{2} \pi \sigma }exp(\frac{t-\mu}{\sigma})^2$
+            \\C.D.F: $\Phi(t| \mu, \sigma)=  \int_{-\infty}^{t} \phi(t| \mu, \sigma)dt$
+        }
+    }
+    % TODO
+    % 1. image of Continuous unifor & Normal Random
+    % 2. function check
 
-
-	
-\subsection{Continuous Uniform} 		
-	$ u(t| a, b)= \begin{cases} \frac{1}{b-a}  & a \le t \le b \\ 
-	0& \text{otherwise} \end{cases}$
-	
-            
-\subsection{Normal Random}             
-	$mean= \mu $ and $std.= \sigma $
-	\\P.D.F: $\phi(t| \mu, \sigma)= \frac{1}{\sqrt{2} \pi \sigma }exp(\frac{t-\mu}{\sigma})^2$
-	\\C.D.F: $\Phi(t| \mu, \sigma)=  \int_{-\infty}^{t} \phi(t| \mu, \sigma)dt$
-        
 \subsection{Random Vector}        
 	$X_N=(x_1, x_2, \cdots x_N)$ can be continuous or discrete
 	\\C.D.F: $F_x(t_1, t_2, \cdots t_n)= P_r[x_1\le t_1,x_2\le t_2, \cdots, x_n\le t_n]$
