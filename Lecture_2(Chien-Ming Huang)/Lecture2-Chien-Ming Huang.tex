@@ -4,6 +4,7 @@
 %\usepackage{theorem,amsmath,enumerate,fancyhdr,amssymb,accents,amsfonts}
 \usepackage{theorem,amsmath,enumerate,fancyhdr,amssymb,amsfonts}
 \usepackage[pdftex]{graphics}
+\usepackage{graphicx}
 %% In order to be consistent use the notation in the following style
 %% file as much as you can. You may take a look at the file to see
 %% what is available.
@@ -119,24 +120,34 @@ See notes in "Lecture 1".
     }
 
     \subsection{Discrete Distribution}{
-        \subsubsection{Discrete uniform}{
-            \[ x: 1,2,3 \cdots k\]
+        \subsubsection{Discrete Uniform Distribution}{
+            \[ x: 1,2,3, \cdots, k\]
             \[ pdf: u_x(t)= \begin{cases} 
-                \frac{1}{n} & \text{if t=1, 2, ..., h} \\
-                0 & \text{otherwise} \end{cases}\]
+                \frac{1}{n}, & \text{if } t=1, 2,  \cdots, h \\
+                0, & \text{otherwise} 
+            \end{cases}\]
             \begin{center}{
-                \includegraphics{discreteuniform.png}
+                \includegraphics[scale=0.25]{Dis_Uniform_distribution_CDF.png}\includegraphics[scale=0.25]{Dis_Uniform_distribution_pmf.png}
             }
             \end{center}
+        }
+        \subsubsection{Bernoulli Distribution}{
+            \[pdf: f_x(t)= \begin{cases} 
+                p, & x = 1 \\ 
+                1-p, & x = 0 \\
+                0, & \text{otherwise}
+            \end{cases}\]
+
+            \[CDF: F_x(t)= \begin{cases} 
+                0, & x \leqslant 0 \\ 
+                1-p, & 0 \leqslant x \leqslant 1 \\
+                0, & \text{otherwise}
+            \end{cases}\]
         }
     }
            
 \subsection{Bernoulli Distribution}             	
-	$x= \begin{cases} p  &\ 0 \\ 
-	1-p &\ 1 \end{cases}$
-	\\$f_x(t)= \begin{cases} p  &\text{if x= 0} \\ 
-	1-p &\text{if x= 1} \\
-	0 &\text{otherwise}\end{cases}$
+	
 
 \subsection{Binomial Distribution} 
 	numbers of 0's in independent Bernoulli trial with $P_r[0]= P$
