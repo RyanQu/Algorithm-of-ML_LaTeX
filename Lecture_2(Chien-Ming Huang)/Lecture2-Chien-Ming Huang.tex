@@ -55,18 +55,35 @@
     \item Review Bayes Theory(Lecture 1) 
     \item Random Variable and Distribution
         \begin{enumerate}
-            \item Random Variable
-            \item Distribution Function
-            \item Discrete Distribution
-            \item Continuous Distribution
+            \item Random variable
+                \begin{enumerate}
+                    \item DRV, discrete random variable
+                    \item CRV, continuous random variable
+                \end{enumerate}
+            \item Distribution function
+                \begin{enumerate}
+                    \item CDF, cumulative distribution function
+                    \item pdf or pmf, probability density(Mass) function
+                \end{enumerate}
+            \item Discrete distribution
+                \begin{enumerate}
+                    \item Discrete uniform distribution
+                    \item Beunoulli's distribution
+                    \item Binomial distribution
+                \end{enumerate}
+            \item Continuous distribution
+                \begin{enumerate}
+                    \item Continuous uniform distribution
+                    \item Normal distribution
+                \end{enumerate}
         \end{enumerate}
     \item Multivariate Distributions
         \begin{enumerate}
-            \item Random Vector
-            \item Discrete Multivariate Distribution
-            \item Binormal Distribution
-            \item Marginal Distribution
-            \item Conditional Distribution
+            \item Random vector
+            \item Discrete multivariate distribution
+            \item Binormal distribution
+            \item Marginal distribution
+            \item Conditional distribution
         \end{enumerate}
     \item Bayes Classification
 \end{enumerate}
@@ -77,15 +94,15 @@
 See notes in "Lecture 1".
 \section{Random Variable and Distribution} 
     \subsection{Random Variable}{
-        \paragraph{Discrete Random Variables(D.R.V)}{
+        \subsubsection{Discrete Random Variable(D.R.V)}{
             $ x\rightarrow t_1, t_2, \cdots, t_n$
         }
-        \paragraph{Continuous Random Variable(C.R.V)}{
+        \subsubsection{Continuous Random Variable(C.R.V)}{
             $ x\rightarrow [a, b]$ a range of value.
         }
     }
     \subsection{Distribution Function}{
-        \paragraph{CDF: }{
+        \subsubsection{CDF: }{
             Cumulative Distribution Function\\
             $ F_x(t)= P_r[x\le t]$, probability can only increase\\
 
@@ -101,11 +118,9 @@ See notes in "Lecture 1".
                     }
                     \end{center}  
             }
-            \end{enumerate}
-            
-              
+            \end{enumerate}  
         }
-        \paragraph{pdf or pmf: }{
+        \subsubsection{pdf or pmf: }{
             Probability Density(Mass) Function\\
             
             \begin{enumerate}{
@@ -116,7 +131,7 @@ See notes in "Lecture 1".
                     }
                     \end{center}
                 \item For Continuous: 
-                    \[ x: \frac{d}{dt}F_x(t),  F_x(t)=\int_{-\infty}^{t}f_x(t)dt \]
+                    \[ f_x(t) = \frac{d}{dt}F_x(t), \text{ } F_x(t)=\int_{-\infty}^{t}f_x(t)dt \]
                     \begin{enumerate}[i]{
                         \item $f_x(t)\ge 0$
                         \item $\int_{-\infty}^{\infty}f_x(t)dt= 1$

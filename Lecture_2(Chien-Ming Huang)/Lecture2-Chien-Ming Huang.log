@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  10 FEB 2017 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  10 FEB 2017 14:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -506,31 +506,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
 
  []
 
-<dis-cdf.png, id=15, 415.5525pt x 348.30125pt>
+<dis-cdf.png, id=10, 415.5525pt x 348.30125pt>
 File: dis-cdf.png Graphic file (type png)
  <use dis-cdf.png>
-Package pdftex.def Info: dis-cdf.png used on input line 95.
+Package pdftex.def Info: dis-cdf.png used on input line 112.
 (pdftex.def)             Requested size: 124.6667pt x 104.49118pt.
 
-<con-cdf.png, id=17, 421.575pt x 316.18124pt>
+<con-cdf.png, id=12, 421.575pt x 316.18124pt>
 File: con-cdf.png Graphic file (type png)
  <use con-cdf.png>
-Package pdftex.def Info: con-cdf.png used on input line 100.
+Package pdftex.def Info: con-cdf.png used on input line 117.
 (pdftex.def)             Requested size: 126.47346pt x 94.8551pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
-
-<dis-pdf.jpg, id=18, 481.8pt x 361.35pt>
-File: dis-pdf.jpg Graphic file (type jpg)
- <use dis-pdf.jpg>
-Package pdftex.def Info: dis-pdf.jpg used on input line 115.
-(pdftex.def)             Requested size: 144.5411pt x 108.40584pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -538,27 +532,33 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./dis-cdf.png> <./con-cdf.png (PNG copy)> <./dis-pdf.jpg>]
+[2 <./dis-cdf.png> <./con-cdf.png (PNG copy)>]
+<dis-pdf.jpg, id=23, 481.8pt x 361.35pt>
+File: dis-pdf.jpg Graphic file (type jpg)
+ <use dis-pdf.jpg>
+Package pdftex.def Info: dis-pdf.jpg used on input line 130.
+(pdftex.def)             Requested size: 144.5411pt x 108.40584pt.
+
 <con-pdf.jpg, id=24, 746.01291pt x 559.50967pt>
 File: con-pdf.jpg Graphic file (type jpg)
  <use con-pdf.jpg>
-Package pdftex.def Info: con-pdf.jpg used on input line 127.
+Package pdftex.def Info: con-pdf.jpg used on input line 142.
 (pdftex.def)             Requested size: 223.80559pt x 167.8542pt.
 
 <Dis_Uniform_distribution_pdf.png, id=25, 652.4375pt x 469.755pt>
 File: Dis_Uniform_distribution_pdf.png Graphic file (type png)
 
 <use Dis_Uniform_distribution_pdf.png>
-Package pdftex.def Info: Dis_Uniform_distribution_pdf.png used on input line 14
-3.
+Package pdftex.def Info: Dis_Uniform_distribution_pdf.png used on input line 15
+8.
 (pdftex.def)             Requested size: 163.10896pt x 117.43846pt.
 
 <Dis_Uniform_distribution_CDF.png, id=26, 652.4375pt x 489.83pt>
 File: Dis_Uniform_distribution_CDF.png Graphic file (type png)
 
 <use Dis_Uniform_distribution_CDF.png>
-Package pdftex.def Info: Dis_Uniform_distribution_CDF.png used on input line 14
-3.
+Package pdftex.def Info: Dis_Uniform_distribution_CDF.png used on input line 15
+8.
 (pdftex.def)             Requested size: 163.10896pt x 122.4572pt.
 
 
@@ -567,25 +567,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3 <./con-pdf.jpg> <./Dis_Uniform_distribution_pdf.png> <./Dis_Uniform_distribu
-tion_CDF.png>]
+[3 <./dis-pdf.jpg> <./con-pdf.jpg>]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 162.
-
-
-Overfull \hbox (43.08188pt too wide) in paragraph at lines 197--206
-\OT1/cmr/m/n/10 P.D.F: $[]\U/euf/m/n/10 (\U/eur/m/n/10 t[]; t[]; []  ; t[]\U/eu
-f/m/n/10 ) = \U/eur/m/n/10 P[]\U/euf/m/n/10 [\U/eur/m/n/10 x[] \U/euf/m/n/10 = 
-\U/eur/m/n/10 t[]; x[] \U/euf/m/n/10 = \U/eur/m/n/10 t[]; []  ; x[] \U/euf/m/n/
-10 = \U/eur/m/n/10 t[]\U/euf/m/n/10 ] = []\U/eur/m/n/10 P[]; P[]; [] P[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--206
-
- []
+(amsmath)                 on input line 177.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -593,8 +579,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4]
-Overfull \hbox (94.13327pt too wide) in paragraph at lines 223--237
+[4 <./Dis_Uniform_distribution_pdf.png> <./Dis_Uniform_distribution_CDF.png>]
+Overfull \hbox (43.08188pt too wide) in paragraph at lines 212--221
+\OT1/cmr/m/n/10 P.D.F: $[]\U/euf/m/n/10 (\U/eur/m/n/10 t[]; t[]; []  ; t[]\U/eu
+f/m/n/10 ) = \U/eur/m/n/10 P[]\U/euf/m/n/10 [\U/eur/m/n/10 x[] \U/euf/m/n/10 = 
+\U/eur/m/n/10 t[]; x[] \U/euf/m/n/10 = \U/eur/m/n/10 t[]; []  ; x[] \U/euf/m/n/
+10 = \U/eur/m/n/10 t[]\U/euf/m/n/10 ] = []\U/eur/m/n/10 P[]; P[]; [] P[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--221
+
+ []
+
+
+Overfull \hbox (94.13327pt too wide) in paragraph at lines 238--252
 \U/eur/m/n/10 f[] \U/euf/m/n/10 = (\U/eur/m/n/10 t[]; t[]; []  ; t[]\U/euf/m/n/
 10 ) = [][] \U/eur/m/n/10 f[]\U/euf/m/n/10 (\U/eur/m/n/10 t[]; []  ; t[]\U/euf/
 m/n/10 )\U/eur/m/n/10 dt[]; []  ; t[] \U/euf/m/n/10 = [][] [][] [] [][] \U/eur/
@@ -615,7 +614,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
-Overfull \hbox (39.05203pt too wide) in paragraph at lines 278--280
+Overfull \hbox (39.05203pt too wide) in paragraph at lines 293--295
 \U/eur/m/n/10 f\U/euf/m/n/10 (\U/eur/m/n/10 x\U/euf/m/n/10 ) = \U/eur/m/n/10 j$
 \OT1/cmr/m/n/10 , $\U/eur/m/n/10 E[]\U/euf/m/n/10 (\U/eur/m/n/10 loss\U/euf/m/n
 /10 (\U/eur/m/n/10 j \U/euf/m/n/10 = []\U/eur/m/n/10 ; x\U/eus/m/n/10 j\U/eur/m
@@ -636,11 +635,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Here is how much of TeX's memory you used:
  4208 strings out of 493013
  51096 string characters out of 6133343
- 142558 words of memory out of 5000000
+ 144558 words of memory out of 5000000
  7613 multiletter control sequences out of 15000+600000
  16991 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,14n,43p,317b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,14n,43p,317b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/font
 s/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/
@@ -664,7 +663,7 @@ ype1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2016/texmf-dist/fonts
 s/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2016/texmf-dist/fon
 ts/type1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texlive/2016/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Lecture2-Chien-Ming Huang.pdf" (7 pages, 259598 bytes).
+Output written on "Lecture2-Chien-Ming Huang.pdf" (7 pages, 259946 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
