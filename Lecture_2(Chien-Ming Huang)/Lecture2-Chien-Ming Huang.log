@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  10 FEB 2017 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  12 FEB 2017 11:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -573,14 +573,55 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 176.
 
+<Con_Uniform_distribution_pdf.png, id=32, 501.875pt x 358.33875pt>
+File: Con_Uniform_distribution_pdf.png Graphic file (type png)
+
+<use Con_Uniform_distribution_pdf.png>
+Package pdftex.def Info: Con_Uniform_distribution_pdf.png used on input line 18
+7.
+(pdftex.def)             Requested size: 125.46843pt x 89.58446pt.
+
+<Con_Uniform_distribution_CDF.png, id=33, 501.875pt x 350.30875pt>
+File: Con_Uniform_distribution_CDF.png Graphic file (type png)
+
+<use Con_Uniform_distribution_CDF.png>
+Package pdftex.def Info: Con_Uniform_distribution_CDF.png used on input line 18
+7.
+(pdftex.def)             Requested size: 125.46843pt x 87.57697pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 22.54448pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4 <./Dis_Uniform_distribution_pdf.png> <./Dis_Uniform_distribution_CDF.png>]
-Overfull \hbox (43.08188pt too wide) in paragraph at lines 213--222
+[4 <./Dis_Uniform_distribution_pdf.png> <./Dis_Uniform_distribution_CDF.png> <.
+/Con_Uniform_distribution_pdf.png> <./Con_Uniform_distribution_CDF.png>]
+<Normal_distribution_pdf.png, id=44, 702.625pt x 448.67625pt>
+File: Normal_distribution_pdf.png Graphic file (type png)
+
+<use Normal_distribution_pdf.png>
+Package pdftex.def Info: Normal_distribution_pdf.png used on input line 197.
+(pdftex.def)             Requested size: 175.6558pt x 112.16878pt.
+
+<Normal_distribution_CDF.png, id=45, 702.625pt x 448.67625pt>
+File: Normal_distribution_CDF.png Graphic file (type png)
+
+<use Normal_distribution_CDF.png>
+Package pdftex.def Info: Normal_distribution_CDF.png used on input line 197.
+(pdftex.def)             Requested size: 175.6558pt x 112.16878pt.
+
+Overfull \hbox (6.31161pt too wide) in paragraph at lines 197--199
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
+
+Overfull \hbox (43.08188pt too wide) in paragraph at lines 223--246
 \OT1/cmr/m/n/10 P.D.F: $[]\U/euf/m/n/10 (\U/eur/m/n/10 t[]; t[]; []  ; t[]\U/eu
 f/m/n/10 ) = \U/eur/m/n/10 P[]\U/euf/m/n/10 [\U/eur/m/n/10 x[] \U/euf/m/n/10 = 
 \U/eur/m/n/10 t[]; x[] \U/euf/m/n/10 = \U/eur/m/n/10 t[]; []  ; x[] \U/euf/m/n/
@@ -588,12 +629,18 @@ f/m/n/10 ) = \U/eur/m/n/10 P[]\U/euf/m/n/10 [\U/eur/m/n/10 x[] \U/euf/m/n/10 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--222
+Underfull \hbox (badness 10000) in paragraph at lines 223--246
 
  []
 
 
-Overfull \hbox (94.13327pt too wide) in paragraph at lines 239--253
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.54448pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5 <./Normal_distribution_pdf.png> <./Normal_distribution_CDF.png>]
+Overfull \hbox (94.13327pt too wide) in paragraph at lines 248--263
 \U/eur/m/n/10 f[] \U/euf/m/n/10 = (\U/eur/m/n/10 t[]; t[]; []  ; t[]\U/euf/m/n/
 10 ) = [][] \U/eur/m/n/10 f[]\U/euf/m/n/10 (\U/eur/m/n/10 t[]; []  ; t[]\U/euf/
 m/n/10 )\U/eur/m/n/10 dt[]; []  ; t[] \U/euf/m/n/10 = [][] [][] [] [][] \U/eur/
@@ -606,15 +653,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 22.54448pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [6]
-Overfull \hbox (39.05203pt too wide) in paragraph at lines 294--296
+Overfull \hbox (39.05203pt too wide) in paragraph at lines 307--309
 \U/eur/m/n/10 f\U/euf/m/n/10 (\U/eur/m/n/10 x\U/euf/m/n/10 ) = \U/eur/m/n/10 j$
 \OT1/cmr/m/n/10 , $\U/eur/m/n/10 E[]\U/euf/m/n/10 (\U/eur/m/n/10 loss\U/euf/m/n
 /10 (\U/eur/m/n/10 j \U/euf/m/n/10 = []\U/eur/m/n/10 ; x\U/eus/m/n/10 j\U/eur/m
@@ -631,46 +671,51 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7] (./Lecture2-Chien-Ming Huang.aux)
+[7]
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.54448pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
- ) 
+[8] (./Lecture2-Chien-Ming Huang.aux) ) 
 Here is how much of TeX's memory you used:
- 4209 strings out of 493013
- 51125 string characters out of 6133343
- 145558 words of memory out of 5000000
- 7614 multiletter control sequences out of 15000+600000
- 16991 words of font info for 70 fonts, out of 8000000 for 9000
+ 4233 strings out of 493013
+ 51816 string characters out of 6133343
+ 142558 words of memory out of 5000000
+ 7632 multiletter control sequences out of 15000+600000
+ 18035 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,14n,43p,317b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/euex7.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eurm5.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eusm5.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.p
-fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/las
-y6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msam10.pfb>
-Output written on "Lecture2-Chien-Ming Huang.pdf" (7 pages, 260228 bytes).
+ 40i,14n,43p,325b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/euler/euex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/euler/euex7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
+/amsfonts/euler/eufm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/amsfonts/euler/eufm5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/euler/eufm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/amsfonts/euler/eurm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/euler/eurm5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/public/amsfonts/euler/eusm5.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "Lecture2-Chien-Ming Huang.pdf" (8 pages, 364780 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 145 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

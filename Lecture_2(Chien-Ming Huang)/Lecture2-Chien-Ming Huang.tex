@@ -92,7 +92,7 @@
 %% the lecture here. You may use itemization or enumeration
 \section{Review Bayes Theory(Lecture 1)}
 See notes in "Lecture 1".
-\section{Random Variable and Distribution} 
+\section{Random Variable and Distribution}{
     \subsection{Random Variable}{
         \subsubsection{Discrete Random Variable(D.R.V)}{
             $ x\rightarrow t_1, t_2, \cdots, t_n$
@@ -178,85 +178,98 @@ See notes in "Lecture 1".
         }
     }
     \subsection{Continuous distribution}{
-        \subsubsection{Continuous uniform}{
-            $ u(t| a, b)= \begin{cases} \frac{1}{b-a}  & a \le t \le b \\ 
-            0& \text{otherwise} \end{cases}$
+        \subsubsection{Continuous uniform distribution}{
+            \[ u(t| a, b)= \begin{cases} 
+                \frac{1}{b-a}, & a \leqslant t \leqslant b \\ 
+                0, & \text{otherwise}
+            \end{cases}\]
+            \begin{center}{
+                \includegraphics[scale=0.25]{Con_Uniform_distribution_pdf.png}\includegraphics[scale=0.25]{Con_Uniform_distribution_CDF.png}
+            }
+            \end{center}
         }
-        \subsubsection{Normal Random}{
-            $mean= \mu $ and $std.= \sigma $
-            \\P.D.F: $\phi(t| \mu, \sigma)= \frac{1}{\sqrt{2} \pi \sigma }exp(\frac{t-\mu}{\sigma})^2$
-            \\C.D.F: $\Phi(t| \mu, \sigma)=  \int_{-\infty}^{t} \phi(t| \mu, \sigma)dt$
+        \subsubsection{Normal distribution}{
+            mean= $\mu $ and std.= $\sigma $
+            \[\text{pdf: } \mathit{f}(\mathit{x}| \mu, \sigma^2)= \frac{1}{\sqrt{2\pi} \sigma }\mathit{e}^{-\frac{(\mathit{x}-\mu)^2}{2\sigma^2}}\]
+            \[\text{CDF: } \frac{1}{2} \lbrack 1+erf(\frac{\mathit{x}-\mu}{\sigma\sqrt{2}})\rbrack\]
+            \[erf(\mathit{x})=\frac{1}{\sqrt{\pi}}\int_{-\mathit{x}}^{\mathit{x}}\mathit{e}^{-t^2}dt\]
+            \begin{center}{
+                \includegraphics[scale=0.25]{Normal_distribution_pdf.png}\includegraphics[scale=0.25]{Normal_distribution_CDF.png}
+            }
+            \end{center}
         }
     }
-    % TODO
-    % 1. image of Continuous unifor & Normal Random
-    % 2. function check
+}
+% section Random Variable and Distribution (end)
 
-\subsection{Random Vector}        
-	$X_N=(x_1, x_2, \cdots x_N)$ can be continuous or discrete
-	\\C.D.F: $F_x(t_1, t_2, \cdots t_n)= P_r[x_1\le t_1,x_2\le t_2, \cdots, x_n\le t_n]$
-	\\$P.D.F: \begin{cases}
-	\frac{d}{dt_1 dt_2 dt_3 \cdots dt_n} F(t_1, t_2, \cdots t_n)= f_{\uwave{x}}(t_1, \cdots, n) & \text{all continuous}\\
-	P_r[x_1= t_1,x_2= t_2, \cdots, x_n=  t_n]=f_{x}(t_1, \cdots, n &\text{all discrete}  \end{cases}$
-	\\both are joint distribution R.V. $x_1, \cdots, x_n$		
+\section{Multivariate Distributions}{
+    \subsection{Random Vector}{
 
+        \(X_N=(x_1, x_2, \cdots x_N)\) can be continuous or discrete.\\
+        \[\text{CDF: } F_x(t_1, t_2, \cdots t_n)= P_r[x_1\leqslant t_1,x_2\leqslant t_2, \cdots, x_n\leqslant t_n]\]
+        \[\text{pdf: } \begin{cases}
+            \frac{d}{dt_1 dt_2 dt_3 \cdots dt_n} F(t_1, t_2, \cdots t_n)= f_{\uwave{x}}(t_1, \cdots, n) & \text{all continuous}\\
+            P_r[x_1= t_1,x_2= t_2, \cdots, x_n=  t_n]=f_{x}(t_1, \cdots, n &\text{all discrete}
+        \end{cases}\]
+        both are joint distribution R.V. $x_1, \cdots, x_n$
+    }
+    \subsection{Discrete Multivariate Distribution}{
+        $ y\rightarrow 1, 2, \cdots, r; \quad P_r[y=r_1]=P_u; \quad \sum P_u= 1$
+        \\repeat n times, $X_n$= number of times y= k occurs 
+        $\uwave{x}= (x_1, \cdots, x_n)$
+        $x_1= \text{ number of times y=1}; x_n= \text{number of times y=r}$
+    }
+    \subsection{Multinomial Distribution}{
+        P.D.F: $\uwave{f_x}(t_1, t_2, \cdots, t_r)= P_r[x_1= t_1,x_2= t_2, \cdots, x_n= t_n]= {n \choose t_1, t_2, \cdots, t_r}P_1^{t_1}, P_2^{t_2}, \cdots P_r^{t_r}$
+        \\${n \choose t_1, t_2, \cdots, t_r}= \frac{n !}{t_1! t_2! \cdots t_n!}$
+        \\$ \uwave{x}=(x_1,x_2) \text{both continuous}, \uwave{\mu}= { \mu_1 \choose \mu_2} $
+        \\$ \sigma_1^2 \rightarrow x_1, \sigma_2^2 \rightarrow x_1, \sigma_{12} \rightarrow x_1x_2$
+        \\Covariance Matrix: $ \sum= \begin{pmatrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{pmatrix} $
+        \\$ \sum= \begin{bmatrix}  \sigma_1^2 & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n}  \\  \sigma_{12} & \sigma_2^2 & \cdots & \cdots & \sigma_{2n}  \\ \vdots & \vdots &  \vdots & \ddots & \vdots \\  \sigma_{1m} & \cdots & \cdots & \cdots & \sigma_{1n} \end{bmatrix}$
+        \\$ \phi(t_1,t_2| {\mu \choose n}, \sum)= \frac{1}{\sqrt{2} \pi Det(\sum)}exp[( \uwave{t} -\uwave{\mu})^T \sum^-1 (\uwave{t} -\uwave{\mu}),  \uwave{t} ={ t_1 \choose t_2} $
+        \\
+        \\joint p.d.f. $f_{(x1,x2)}(t_1,t_2)$
+    }
+    \begin{tabular}{l|*{4}r}
+        \hline
+        \diagbox{$x_1$}{$x_2$} & 1& 2 & 3 & $f_{x_2}(t)$\\
+        \hline
+        0 & 0.1 & 0.4 & 0.2 & 0.7 \\
+        \hline
+        1 & 0.2 & 0.05 & 0.05 & 0.3 \\
+        \hline
+        $f_{x}(t)$ &0.3 & 0.45 & 0.45 & \\
+    \end{tabular} 
+    $f_{x_1|x_2= 0} $ in (1): $\frac{0.1}{0.7}= \frac{1}{7}$
+    \\$f_{x_1|x_2= 0} $ in (2): $\frac{0.4}{0.7}= \frac{4}{7}$
+    \\$f_{x_1|x_2= 0} $ in (3): $\frac{0.2}{0.7}= \frac{2}{7}$
 
-\section{Multivariate Distributions} 
+    \subsection{Marginal Distribution}{
+        $ \uwave{x}= (x_1, x_2, \cdots, x_n) \rightarrow f_\uwave{x}(t_1, \cdots, t_n)$
+        \\p.d.f.: $(x_1, x_2, \cdots, x_n)= \overline{\uwave{x}}$
+        \\ $f_{\overline{\uwave{x}}}= (t_1, t_2, \cdots, t_n)=  \int_{t_{k+1}, \cdots, t_n}^{\infty} f_{\uwave{x}} (t_1, \cdots, t_n)dt_{k+1}, \cdots, t_n= \sum_{t_{k+1}}\sum_{t_{k+2}}\cdots \sum_{t_{n}}f_x(t_1,\cdots, t_n)$
+        \\$P_r[x= 0]= P_r[x_2=0, x_1=1]+ P_r[x_2=0, x_1=2]+P_r[x_2=0, x_1=3]$
+        \\$P_r[x= 1]= P_r[x_2=1, x_1=1]+ P_r[x_2=1, x_1=2]+P_r[x_2=1, x_1=3]$
+        \\ $ \phi( t_1, t_2| \uwave{\mu}, \sum)$
+        \\ $ \phi(t_1)= \int_{-\infty}^{\infty} \phi(t_1,t_2| \cdots) dt_2$
+        \\ Find p.d.f.$ f(t_1, t_2)$
+        \\ Example: $x_1 \rightarrow$ Height, $x_2 \rightarrow$ Gender $\begin{cases} 0  & \text{male} \\ 
+            1& \text{female} \end{cases}$
+        \\ for $x_2= 0 \rightarrow \text{Height} \sim N(69,4.5) \Leftrightarrow f_{x_1|x_2}(t_1|t_2= 0)\phi( t_1|\phi=69, \sigma= 4.5)$
+        \\ for $x_2= 1 \rightarrow \text{Height} \sim N(65,4.2)\Leftrightarrow f_{x_1|x_2}(t_1|t_2= 1)\phi( t_1|\phi=65, \sigma= 4.2$
+        \\ marginal distribution of height for people
+        \\ $f_{x_1}(t_1)=f_{x_1|x_2}(t_1|t_2= 0)*f_{x_2}(0)+f_{x_1|x_2}(t_1|t_2= 1)*f_{x_2}(1)= \phi(t_1|69, 4.5)*0.5+\phi(t_2|65, 4.2)*0.5= \phi(t_1|\frac{69+65}{2},\sqrt{\frac{4.5^2+4.2^2}{2}} )$
+    }
 
-\subsection{Discrete Multivariate Distribution}
-$ y\rightarrow 1, 2, \cdots, r; \quad P_r[y=r_1]=P_u; \quad \sum P_u= 1$
-\\repeat n times, $X_n$= number of times y= k occurs 
-$\uwave{x}= (x_1, \cdots, x_n)$
-$x_1= \text{ number of times y=1}; x_n= \text{number of times y=r}$
-
-\subsection{Multinomial Distribution}
-P.D.F: $\uwave{f_x}(t_1, t_2, \cdots, t_r)= P_r[x_1= t_1,x_2= t_2, \cdots, x_n= t_n]= {n \choose t_1, t_2, \cdots, t_r}P_1^{t_1}, P_2^{t_2}, \cdots P_r^{t_r}$
-\\${n \choose t_1, t_2, \cdots, t_r}= \frac{n !}{t_1! t_2! \cdots t_n!}$
-\\$ \uwave{x}=(x_1,x_2) \text{both continuous}, \uwave{\mu}= { \mu_1 \choose \mu_2} $
-\\$ \sigma_1^2 \rightarrow x_1, \sigma_2^2 \rightarrow x_1, \sigma_{12} \rightarrow x_1x_2$
-\\Covariance Matrix: $ \sum= \begin{pmatrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{pmatrix} $
-\\$ \sum= \begin{bmatrix}  \sigma_1^2 & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n}  \\  \sigma_{12} & \sigma_2^2 & \cdots & \cdots & \sigma_{2n}  \\ \vdots & \vdots &  \vdots & \ddots & \vdots \\  \sigma_{1m} & \cdots & \cdots & \cdots & \sigma_{1n} \end{bmatrix}$
-\\$ \phi(t_1,t_2| {\mu \choose n}, \sum)= \frac{1}{\sqrt{2} \pi Det(\sum)}exp[( \uwave{t} -\uwave{\mu})^T \sum^-1 (\uwave{t} -\uwave{\mu}),  \uwave{t} ={ t_1 \choose t_2} $
-\\
-\\joint p.d.f. $f_{(x1,x2)}(t_1,t_2)$
-
-\begin{tabular}{l|*{4}r}
- \hline
-\diagbox{$x_1$}{$x_2$} & 1& 2 & 3 & $f_{x_2}(t)$\\
- \hline
-0 & 0.1 & 0.4 & 0.2 & 0.7 \\
- \hline
-1 & 0.2 & 0.05 & 0.05 & 0.3 \\
- \hline
-$f_{x}(t)$ &0.3 & 0.45 & 0.45 & \\
-\end{tabular} 
-
-$f_{x_1|x_2= 0} $ in (1): $\frac{0.1}{0.7}= \frac{1}{7}$
-\\$f_{x_1|x_2= 0} $ in (2): $\frac{0.4}{0.7}= \frac{4}{7}$
-\\$f_{x_1|x_2= 0} $ in (3): $\frac{0.2}{0.7}= \frac{2}{7}$
-
-\subsection{Marginal Distribution} 
-$ \uwave{x}= (x_1, x_2, \cdots, x_n) \rightarrow f_\uwave{x}(t_1, \cdots, t_n)$
-\\p.d.f.: $(x_1, x_2, \cdots, x_n)= \overline{\uwave{x}}$
-\\ $f_{\overline{\uwave{x}}}= (t_1, t_2, \cdots, t_n)=  \int_{t_{k+1}, \cdots, t_n}^{\infty} f_{\uwave{x}} (t_1, \cdots, t_n)dt_{k+1}, \cdots, t_n= \sum_{t_{k+1}}\sum_{t_{k+2}}\cdots \sum_{t_{n}}f_x(t_1,\cdots, t_n)$
-\\$P_r[x= 0]= P_r[x_2=0, x_1=1]+ P_r[x_2=0, x_1=2]+P_r[x_2=0, x_1=3]$
-\\$P_r[x= 1]= P_r[x_2=1, x_1=1]+ P_r[x_2=1, x_1=2]+P_r[x_2=1, x_1=3]$
-\\ $ \phi( t_1, t_2| \uwave{\mu}, \sum)$
-\\ $ \phi(t_1)= \int_{-\infty}^{\infty} \phi(t_1,t_2| \cdots) dt_2$
-\\ Find p.d.f.$ f(t_1, t_2)$
-\\ Example: $x_1 \rightarrow$ Height, $x_2 \rightarrow$ Gender $\begin{cases} 0  & \text{male} \\ 
-	1& \text{female} \end{cases}$
-\\ for $x_2= 0 \rightarrow \text{Height} \sim N(69,4.5) \Leftrightarrow f_{x_1|x_2}(t_1|t_2= 0)\phi( t_1|\phi=69, \sigma= 4.5)$
-\\ for $x_2= 1 \rightarrow \text{Height} \sim N(65,4.2)\Leftrightarrow f_{x_1|x_2}(t_1|t_2= 1)\phi( t_1|\phi=65, \sigma= 4.2$
-\\ marginal distribution of height for people
-\\ $f_{x_1}(t_1)=f_{x_1|x_2}(t_1|t_2= 0)*f_{x_2}(0)+f_{x_1|x_2}(t_1|t_2= 1)*f_{x_2}(1)= \phi(t_1|69, 4.5)*0.5+\phi(t_2|65, 4.2)*0.5= \phi(t_1|\frac{69+65}{2},\sqrt{\frac{4.5^2+4.2^2}{2}} )$
-
-\subsection{Conditional Distribution in 2 Variables} 
-$x=(x_1, x_2) \rightarrow$ joint  $f(t_1,t_2)$
-\\$f_{x_1|x_2}(t_1|t_2)=\frac{ f_x(t_1,t_2)}{f_x(t_2)}$
-\\$f_x(t_1, t_2)=  f_{x_1|x_2}(t_1|t_2)*f_{x_2}(t_2)$
-\\$f_{x_2|x_1}(t_2|t_1)=\frac{ f_x(t_1,t_2)}{f_{x_1}(t_1)}$
-\\$f_x(t_1, t_2)=  f_{x_2|x_1}(t_2|t_1)*f_{x_1}(t_1)$
+    \subsection{Conditional Distribution in 2 Variables}{
+        $x=(x_1, x_2) \rightarrow$ joint  $f(t_1,t_2)$
+        \\$f_{x_1|x_2}(t_1|t_2)=\frac{ f_x(t_1,t_2)}{f_x(t_2)}$
+        \\$f_x(t_1, t_2)=  f_{x_1|x_2}(t_1|t_2)*f_{x_2}(t_2)$
+        \\$f_{x_2|x_1}(t_2|t_1)=\frac{ f_x(t_1,t_2)}{f_{x_1}(t_1)}$
+        \\$f_x(t_1, t_2)=  f_{x_2|x_1}(t_2|t_1)*f_{x_1}(t_1)$
+    }
+}
+% section Multivariate Distributions (end)
 
 \section{Bayes} 
 \subsection{Bayes Formula} 
@@ -301,26 +314,5 @@ $c= avgmin\sum_{i=1}^{k}f(x|i)P_r[i]C_{ij}$
 \\fake:$P_r[x_2=1|x_1=7]*C_{21}+P_r[x_2=0|x_1=7]*C_{22}$
 \\$min:\begin{cases} 0.55*0+0.45*1=0.45 \\ 
 	0.55*4+0.45*0=1.8 \end{cases}$
-%\begin{enumerate}
-%\item 
-%\item
-%etc
-%\end{enumerate}
-
-% Add additional sections and sub section as need with appropriate
-% titles
-% section{  }
-
-%\subsection{ }
-%\subsubsection{ }
-
-%% For including graphs or pictures use a .pdf pr .png type pictures
-%% format and use the following to include it in your file. Note
-%% that scale isuse tp resize the graph if it is too big or too
-%% small:
-
-%\begin{center}
-%\includegraphics[scale=0.5]{filename.pdf}
-%\end{center}
 
 \end{document}  
