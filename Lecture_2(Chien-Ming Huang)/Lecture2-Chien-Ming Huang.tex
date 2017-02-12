@@ -208,20 +208,22 @@ See notes in "Lecture 1".
         \(X_N=(x_1, x_2, \cdots x_N)\) can be continuous or discrete.
         \[\text{CDF: } F_x(t_1, t_2, \cdots t_n)= P_r[x_1\leqslant t_1,x_2\leqslant t_2, \cdots, x_n\leqslant t_n]\]
         \[\text{pdf: } \begin{cases}
-            \frac{d}{dt_1 dt_2 dt_3 \cdots dt_n} F(t_1, t_2, \cdots t_n)= f_{\uwave{x}}(t_1, \cdots, n) & \text{all continuous}\\
-            P_r[x_1= t_1,x_2= t_2, \cdots, x_n=  t_n]=f_{x}(t_1, \cdots, n &\text{all discrete}
+            \frac{\partial}{\partial t_1 \partial t_2 \partial t_3 \cdots \partial t_n} F(t_1, t_2, \cdots t_n)= f_{\uwave{x}}(t_1, \cdots, t_n), & \text{all continuous}\\
+            P_r[x_1= t_1,x_2= t_2, \cdots, x_n= t_n]=f_{x}(t_1, \cdots, t_n), & \text{all discrete}
         \end{cases}\]
         both are joint distribution R.V. $x_1, \cdots, x_n$
     }
     \subsection{Discrete Multivariate Distribution}{
-        $ y\rightarrow 1, 2, \cdots, r; \quad P_r[y=r_1]=P_u; \quad \sum P_u= 1$
-        \\repeat n times, $X_n$= number of times y= k occurs 
-        $\uwave{x}= (x_1, \cdots, x_n)$
-        $x_1= \text{ number of times y=1}; x_n= \text{number of times y=r}$
+        \[ Y\rightarrow 1, 2, \cdots, r; \quad P[Y=r_1]=P_u; \quad \sum P_u= 1\]
+        repeat $n$ times, $x_k$= number of times $Y = k$ occurs 
+        \[\uwave{x}= (x_1, \cdots, x_n)\]
+        \[\text{pdf: } \mathit{f_x}(x_1, x_2, \cdots, x_n) = P[x_1=t_1, x_2=t_2, \cdots, x_n=t_n]{n \choose t_1, t_2, \cdots, t_n}{p_1}^{t_1}{p_2}^{t_2}\cdots{p_n}^{t_n}\]
+        \[{n \choose t_1, t_2, \cdots, t_r}= \frac{n !}{t_1! t_2! \cdots t_n!}\]
+    }
+    \subsection{Binormal distribution}{
+        %TODO
     }
     \subsection{Multinomial Distribution}{
-        P.D.F: $\uwave{f_x}(t_1, t_2, \cdots, t_r)= P_r[x_1= t_1,x_2= t_2, \cdots, x_n= t_n]= {n \choose t_1, t_2, \cdots, t_r}P_1^{t_1}, P_2^{t_2}, \cdots P_r^{t_r}$
-        \\${n \choose t_1, t_2, \cdots, t_r}= \frac{n !}{t_1! t_2! \cdots t_n!}$
         \\$ \uwave{x}=(x_1,x_2) \text{both continuous}, \uwave{\mu}= { \mu_1 \choose \mu_2} $
         \\$ \sigma_1^2 \rightarrow x_1, \sigma_2^2 \rightarrow x_1, \sigma_{12} \rightarrow x_1x_2$
         \\Covariance Matrix: $ \sum= \begin{pmatrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{pmatrix} $

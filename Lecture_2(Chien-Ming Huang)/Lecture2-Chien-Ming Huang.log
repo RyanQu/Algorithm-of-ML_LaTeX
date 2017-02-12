@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  12 FEB 2017 11:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  12 FEB 2017 11:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -616,6 +616,14 @@ Overfull \hbox (6.31161pt too wide) in paragraph at lines 197--199
  []
 
 
+Overfull \hbox (52.44576pt too wide) detected at line 220
+[][]\U/euf/m/n/10 (\U/eur/m/n/10 x[]; x[]; []  ; x[]\U/euf/m/n/10 ) = \U/eur/m/
+n/10 P\U/euf/m/n/10 [\U/eur/m/n/10 x[] \U/euf/m/n/10 = \U/eur/m/n/10 t[]; x[] \
+U/euf/m/n/10 = \U/eur/m/n/10 t[]; []  ; x[] \U/euf/m/n/10 = \U/eur/m/n/10 t[]\U
+/euf/m/n/10 ][][][][][] [] [][]
+ []
+
+
 Overfull \hbox (43.08188pt too wide) in paragraph at lines 223--246
 \OT1/cmr/m/n/10 P.D.F: $[]\U/euf/m/n/10 (\U/eur/m/n/10 t[]; t[]; []  ; t[]\U/eu
 f/m/n/10 ) = \U/eur/m/n/10 P[]\U/euf/m/n/10 [\U/eur/m/n/10 x[] \U/euf/m/n/10 = 
@@ -649,6 +657,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.54448pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
 Overfull \hbox (39.05203pt too wide) in paragraph at lines 307--309
 \U/eur/m/n/10 f\U/euf/m/n/10 (\U/eur/m/n/10 x\U/euf/m/n/10 ) = \U/eur/m/n/10 j$
 \OT1/cmr/m/n/10 , $\U/eur/m/n/10 E[]\U/euf/m/n/10 (\U/eur/m/n/10 loss\U/euf/m/n
@@ -666,18 +681,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 22.54448pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [8] (./Lecture2-Chien-Ming Huang.aux) ) 
 Here is how much of TeX's memory you used:
  4233 strings out of 493013
  51816 string characters out of 6133343
- 142558 words of memory out of 5000000
+ 143558 words of memory out of 5000000
  7632 multiletter control sequences out of 15000+600000
  18035 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -707,7 +715,7 @@ pe1/public/amsfonts/euler/eusm5.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Lecture2-Chien-Ming Huang.pdf" (8 pages, 364802 bytes).
+Output written on "Lecture2-Chien-Ming Huang.pdf" (8 pages, 365083 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
