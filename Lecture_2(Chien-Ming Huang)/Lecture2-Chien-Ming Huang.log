@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  12 FEB 2017 11:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  12 FEB 2017 11:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -616,11 +616,6 @@ Overfull \hbox (6.31161pt too wide) in paragraph at lines 197--199
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
-
- []
-
-
 Overfull \hbox (43.08188pt too wide) in paragraph at lines 223--246
 \OT1/cmr/m/n/10 P.D.F: $[]\U/euf/m/n/10 (\U/eur/m/n/10 t[]; t[]; []  ; t[]\U/eu
 f/m/n/10 ) = \U/eur/m/n/10 P[]\U/euf/m/n/10 [\U/eur/m/n/10 x[] \U/euf/m/n/10 = 
@@ -712,7 +707,7 @@ pe1/public/amsfonts/euler/eusm5.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Lecture2-Chien-Ming Huang.pdf" (8 pages, 364780 bytes).
+Output written on "Lecture2-Chien-Ming Huang.pdf" (8 pages, 364802 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
