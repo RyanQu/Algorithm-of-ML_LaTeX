@@ -221,14 +221,17 @@ See notes in "Lecture 1".
         \[{n \choose t_1, t_2, \cdots, t_r}= \frac{n !}{t_1! t_2! \cdots t_n!}\]
     }
     \subsection{Binormal distribution}{
-        %TODO Change structure of notes, add follow subsection in this one.
+        \[\uwave{x}=(x_1,x_2), \text{both continuous}\]
+        \[\uwave{\mu}= { \mu_1 \choose \mu_2}, \sigma_1^2 \rightarrow x_1, \sigma_2^2 \rightarrow x_1, \sigma_{12} \rightarrow x_1x_2 \]
+        \[\text{Covariance Matrix: } \sum= \begin{pmatrix} 
+        \sigma_1^2 & \sigma_{12} \\ 
+        \sigma_{12} & \sigma_2^2 \end{pmatrix} \]
+        %TODO Change structure of notes, check formula
     }
     \subsection{Multinomial Distribution}{
         The rest
-        \\$ \uwave{x}=(x_1,x_2) \text{both continuous}, \uwave{\mu}= { \mu_1 \choose \mu_2} $
-        \\$ \sigma_1^2 \rightarrow x_1, \sigma_2^2 \rightarrow x_1, \sigma_{12} \rightarrow x_1x_2$
-        \\Covariance Matrix: $ \sum= \begin{pmatrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2 \end{pmatrix} $
-        \\$ \sum= \begin{bmatrix}  \sigma_1^2 & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n}  \\  \sigma_{12} & \sigma_2^2 & \cdots & \cdots & \sigma_{2n}  \\ \vdots & \vdots &  \vdots & \ddots & \vdots \\  \sigma_{1m} & \cdots & \cdots & \cdots & \sigma_{1n} \end{bmatrix}$
+
+        $ \sum= \begin{bmatrix}  \sigma_1^2 & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n}  \\  \sigma_{12} & \sigma_2^2 & \cdots & \cdots & \sigma_{2n}  \\ \vdots & \vdots &  \vdots & \ddots & \vdots \\  \sigma_{1m} & \cdots & \cdots & \cdots & \sigma_{1n} \end{bmatrix}$
         \\$ \phi(t_1,t_2| {\mu \choose n}, \sum)= \frac{1}{\sqrt{2} \pi Det(\sum)}exp[( \uwave{t} -\uwave{\mu})^T \sum^-1 (\uwave{t} -\uwave{\mu}),  \uwave{t} ={ t_1 \choose t_2} $
         \\
         \\joint p.d.f. $f_{(x1,x2)}(t_1,t_2)$
