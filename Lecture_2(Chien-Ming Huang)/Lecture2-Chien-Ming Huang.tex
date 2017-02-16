@@ -222,37 +222,40 @@ See notes in "Lecture 1".
     }
     \subsection{Binormal distribution}{
         \[\uwave{x}=(x_1,x_2), \text{both continuous}\]
-        \[\uwave{\mu}= { \mu_1 \choose \mu_2}, \sigma_1^2 \rightarrow x_1, \sigma_2^2 \rightarrow x_1, \sigma_{12} \rightarrow x_1x_2 \]
-        \[\text{Covariance Matrix: } \sum= \begin{pmatrix} 
-        \sigma_1^2 & \sigma_{12} \\ 
-        \sigma_{12} & \sigma_2^2 \end{pmatrix} \]
-        %TODO Change structure of notes, check formula
-    }
-    \subsection{Multinomial Distribution}{
-        The rest
+        \[\uwave{\mu}= { \mu_1 \choose \mu_2}, \sigma_1^2 \rightarrow x_1, \sigma_2^2 \rightarrow x_2, \sigma_{1,2} \rightarrow x_1,x_2 \]
+        \[\text{Covariance Matrix: } 
+        \Sigma= \begin{pmatrix} 
+            \sigma_1^2 & \sigma_{1,2} \\ 
+            \sigma_{1,2} & \sigma_2^2 
+        \end{pmatrix} \]
+        \[ \phi(t_1,t_2| \uwave{\mu}, \Sigma)= \frac{1}{\sqrt{2 \pi \cdot Det(\Sigma)}}exp[( \uwave{ t } -\uwave{\mu})^T \Sigma^{-1} (\uwave{t} -\uwave{\mu}),  \uwave{t} ={ t_1 \choose t_2} \]
 
-        $ \sum= \begin{bmatrix}  \sigma_1^2 & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n}  \\  \sigma_{12} & \sigma_2^2 & \cdots & \cdots & \sigma_{2n}  \\ \vdots & \vdots &  \vdots & \ddots & \vdots \\  \sigma_{1m} & \cdots & \cdots & \cdots & \sigma_{1n} \end{bmatrix}$
-        \\$ \phi(t_1,t_2| {\mu \choose n}, \sum)= \frac{1}{\sqrt{2} \pi Det(\sum)}exp[( \uwave{t} -\uwave{\mu})^T \sum^-1 (\uwave{t} -\uwave{\mu}),  \uwave{t} ={ t_1 \choose t_2} $
-        \\
-        \\joint p.d.f. $f_{(x1,x2)}(t_1,t_2)$
-    }
-    \begin{tabular}{l|*{4}r}
-        \hline
-        \diagbox{$x_1$}{$x_2$} & 1& 2 & 3 & $f_{x_2}(t)$\\
-        \hline
-        0 & 0.1 & 0.4 & 0.2 & 0.7 \\
-        \hline
-        1 & 0.2 & 0.05 & 0.05 & 0.3 \\
-        \hline
-        $f_{x}(t)$ &0.3 & 0.45 & 0.45 & \\
-    \end{tabular} 
-    $f_{x_1|x_2= 0} $ in (1): $\frac{0.1}{0.7}= \frac{1}{7}$
-    \\$f_{x_1|x_2= 0} $ in (2): $\frac{0.4}{0.7}= \frac{4}{7}$
-    \\$f_{x_1|x_2= 0} $ in (3): $\frac{0.2}{0.7}= \frac{2}{7}$
+        In a similar way, for multi-normal distribution, 
+        \[ \Sigma= \begin{bmatrix}  \sigma_1^2 & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n}  \\  \sigma_{12} & \sigma_2^2 & \cdots & \cdots & \sigma_{2n}  \\ \vdots & \vdots &  \vdots & \ddots & \vdots \\  \sigma_{1m} & \cdots & \cdots & \cdots & \sigma_{1n} \end{bmatrix}\]
 
+        Joint pdf for binormal distribution: \(f_{(x1,x2)}(t_1,t_2)\)
+
+        \paragraph{e.g. }{
+            \begin{tabular}{l|*{4}r}
+                \hline
+                \diagbox{$x_2$}{$x_1$} & 1& 2 & 3 & $f_{x_2}(t)$\\
+                \hline
+                0 & 0.1 & 0.4 & 0.2 & 0.7 \\
+                \hline
+                1 & 0.2 & 0.05 & 0.05 & 0.3 \\
+                \hline
+                $f_{x_1}(t)$ &0.3 & 0.45 & 0.45 & \\
+            \end{tabular}
+
+            \[P[x_2= 0] = P[x_2=0 \vert x_1=1]+P[x_2=0 \vert x_1=2]+P[x_2=0 \vert x_1=3]=0.7\]
+            \[P[x_2= 1] = 1 - P[x_2= 0] = 0.3\]
+        }
+        
+    }
+    
     \subsection{Marginal Distribution}{
-        $ \uwave{x}= (x_1, x_2, \cdots, x_n) \rightarrow f_\uwave{x}(t_1, \cdots, t_n)$
-        \\p.d.f.: $(x_1, x_2, \cdots, x_n)= \overline{\uwave{x}}$
+        \[ \uwave{x}= (x_1, x_2, \cdots, x_n) \rightarrow f_\uwave{x}(t_1, \cdots, t_n)\]
+        pdf: \((x_1, x_2, \cdots, x_n)= \overline{\uwave{x}}\)
         \\ $f_{\overline{\uwave{x}}}= (t_1, t_2, \cdots, t_n)=  \int_{t_{k+1}, \cdots, t_n}^{\infty} f_{\uwave{x}} (t_1, \cdots, t_n)dt_{k+1}, \cdots, t_n= \sum_{t_{k+1}}\sum_{t_{k+2}}\cdots \sum_{t_{n}}f_x(t_1,\cdots, t_n)$
         \\$P_r[x= 0]= P_r[x_2=0, x_1=1]+ P_r[x_2=0, x_1=2]+P_r[x_2=0, x_1=3]$
         \\$P_r[x= 1]= P_r[x_2=1, x_1=1]+ P_r[x_2=1, x_1=2]+P_r[x_2=1, x_1=3]$
