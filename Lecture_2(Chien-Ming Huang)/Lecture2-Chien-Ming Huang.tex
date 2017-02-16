@@ -222,18 +222,23 @@ See notes in "Lecture 1".
     }
     \subsection{Binormal distribution}{
         \[\uwave{x}=(x_1,x_2), \text{both continuous}\]
-        \[\uwave{\mu}= { \mu_1 \choose \mu_2}, \sigma_1^2 \rightarrow x_1, \sigma_2^2 \rightarrow x_2, \sigma_{1,2} \rightarrow x_1,x_2 \]
+        \[\uwave{\mu}= { \mu_1 \choose \mu_2}, \sigma_1^2 \rightarrow x_1, \sigma_2^2 \rightarrow x_2, \sigma_{21} \rightarrow x_1,x_2 \]
         \[\text{Covariance Matrix: } 
         \Sigma= \begin{pmatrix} 
-            \sigma_1^2 & \sigma_{1,2} \\ 
-            \sigma_{1,2} & \sigma_2^2 
+            \sigma_1^2 & \sigma_{12} \\ 
+            \sigma_{12} & \sigma_2^2 
         \end{pmatrix} \]
         \[ \phi(t_1,t_2| \uwave{\mu}, \Sigma)= \frac{1}{\sqrt{2 \pi \cdot Det(\Sigma)}}exp[( \uwave{ t } -\uwave{\mu})^T \Sigma^{-1} (\uwave{t} -\uwave{\mu}),  \uwave{t} ={ t_1 \choose t_2} \]
+        \[\phi(t_1)= \int_{-\infty}^{\infty} \phi(t_1,t_2| \cdots) dt_2\]
+
+        Joint pdf: \(f_{(x1,x2)}(t_1,t_2)\)
 
         In a similar way, for multi-normal distribution, 
-        \[ \Sigma= \begin{bmatrix}  \sigma_1^2 & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n}  \\  \sigma_{12} & \sigma_2^2 & \cdots & \cdots & \sigma_{2n}  \\ \vdots & \vdots &  \vdots & \ddots & \vdots \\  \sigma_{1m} & \cdots & \cdots & \cdots & \sigma_{1n} \end{bmatrix}\]
-
-        Joint pdf for binormal distribution: \(f_{(x1,x2)}(t_1,t_2)\)
+        \[ \Sigma= \begin{bmatrix}
+            \sigma_1^2 & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n}  \\
+            \sigma_{12} & \sigma_2^2 & \cdots & \cdots & \sigma_{2n}  \\
+            \vdots & \vdots &  \vdots & \ddots & \vdots \\
+            \sigma_{n1} & \cdots & \cdots & \cdots & \sigma_{n}^n \end{bmatrix}\]
 
         \paragraph{e.g. }{
             \begin{tabular}{l|*{4}r}
@@ -254,20 +259,25 @@ See notes in "Lecture 1".
     }
     
     \subsection{Marginal Distribution}{
-        \[ \uwave{x}= (x_1, x_2, \cdots, x_n) \rightarrow f_\uwave{x}(t_1, \cdots, t_n)\]
-        pdf: \((x_1, x_2, \cdots, x_n)= \overline{\uwave{x}}\)
-        \\ $f_{\overline{\uwave{x}}}= (t_1, t_2, \cdots, t_n)=  \int_{t_{k+1}, \cdots, t_n}^{\infty} f_{\uwave{x}} (t_1, \cdots, t_n)dt_{k+1}, \cdots, t_n= \sum_{t_{k+1}}\sum_{t_{k+2}}\cdots \sum_{t_{n}}f_x(t_1,\cdots, t_n)$
-        \\$P_r[x= 0]= P_r[x_2=0, x_1=1]+ P_r[x_2=0, x_1=2]+P_r[x_2=0, x_1=3]$
-        \\$P_r[x= 1]= P_r[x_2=1, x_1=1]+ P_r[x_2=1, x_1=2]+P_r[x_2=1, x_1=3]$
-        \\ $ \phi( t_1, t_2| \uwave{\mu}, \sum)$
-        \\ $ \phi(t_1)= \int_{-\infty}^{\infty} \phi(t_1,t_2| \cdots) dt_2$
-        \\ Find p.d.f.$ f(t_1, t_2)$
-        \\ Example: $x_1 \rightarrow$ Height, $x_2 \rightarrow$ Gender $\begin{cases} 0  & \text{male} \\ 
-            1& \text{female} \end{cases}$
-        \\ for $x_2= 0 \rightarrow \text{Height} \sim N(69,4.5) \Leftrightarrow f_{x_1|x_2}(t_1|t_2= 0)\phi( t_1|\phi=69, \sigma= 4.5)$
-        \\ for $x_2= 1 \rightarrow \text{Height} \sim N(65,4.2)\Leftrightarrow f_{x_1|x_2}(t_1|t_2= 1)\phi( t_1|\phi=65, \sigma= 4.2$
-        \\ marginal distribution of height for people
-        \\ $f_{x_1}(t_1)=f_{x_1|x_2}(t_1|t_2= 0)*f_{x_2}(0)+f_{x_1|x_2}(t_1|t_2= 1)*f_{x_2}(1)= \phi(t_1|69, 4.5)*0.5+\phi(t_2|65, 4.2)*0.5= \phi(t_1|\frac{69+65}{2},\sqrt{\frac{4.5^2+4.2^2}{2}} )$
+        \[ \uwave{x}= (x_1, x_2, \cdots, x_n) \rightarrow f_{x_{\sim}}(t_1, \cdots, t_n)\]
+        To calculate pdf,
+        \[f_{x_{\sim}}(t_1, t_2, \cdots, t_n) = \int_{t_{k+1}, \cdots, t_n}^{\infty} f_{x_{\sim}}(t_1, \cdots, t_n)dt_{k+1}, \cdots, dt_n= \sum_{t_{k+1}}\sum_{t_{k+2}}\cdots \sum_{t_{n}}f_{x_{\sim}}(t_1,\cdots, t_n)\]
+        
+        Joint pdf: \(f(t_1, t_2)\)
+        
+        \paragraph{e.g. }{
+            Supposed that: $x_1 \rightarrow$ Height, $x_2 \rightarrow$ Gender,
+            \[\begin{cases} 0  & \text{male} \\ 
+            1& \text{female} \end{cases}\]
+
+            For $x_2= 0 \rightarrow \text{Height} \sim N(69,4.5) \Leftrightarrow f_{x_1|x_2}(t_1|t_2= 0)\phi( t_1|\phi=69, \sigma= 4.5)$
+
+            For $x_2= 1 \rightarrow \text{Height} \sim N(65,4.2)\Leftrightarrow f_{x_1|x_2}(t_1|t_2= 1)\phi( t_1|\phi=65, \sigma= 4.2$
+            
+            Marginal distribution of height for people
+            \\ $f_{x_1}(t_1)=f_{x_1|x_2}(t_1|t_2= 0)*f_{x_2}(0)+f_{x_1|x_2}(t_1|t_2= 1)*f_{x_2}(1)= \phi(t_1|69, 4.5)*0.5+\phi(t_2|65, 4.2)*0.5= \phi(t_1|\frac{69+65}{2},\sqrt{\frac{4.5^2+4.2^2}{2}} )$
+        } 
+        
     }
 
     \subsection{Conditional Distribution in 2 Variables}{
