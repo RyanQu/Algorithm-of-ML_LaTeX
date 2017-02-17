@@ -238,24 +238,8 @@ See notes in "Lecture 1".
             \sigma_1^2 & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n}  \\
             \sigma_{12} & \sigma_2^2 & \cdots & \cdots & \sigma_{2n}  \\
             \vdots & \vdots &  \vdots & \ddots & \vdots \\
-            \sigma_{n1} & \cdots & \cdots & \cdots & \sigma_{n}^n \end{bmatrix}\]
-
-        \paragraph{e.g. }{
-            \begin{tabular}{l|*{4}r}
-                \hline
-                \diagbox{$x_2$}{$x_1$} & 1& 2 & 3 & $f_{x_2}(t)$\\
-                \hline
-                0 & 0.1 & 0.4 & 0.2 & 0.7 \\
-                \hline
-                1 & 0.2 & 0.05 & 0.05 & 0.3 \\
-                \hline
-                $f_{x_1}(t)$ &0.3 & 0.45 & 0.45 & \\
-            \end{tabular}
-
-            \[P[x_2= 0] = P[x_2=0 \vert x_1=1]+P[x_2=0 \vert x_1=2]+P[x_2=0 \vert x_1=3]=0.7\]
-            \[P[x_2= 1] = 1 - P[x_2= 0] = 0.3\]
-        }
-        
+            \sigma_{n1} & \cdots & \cdots & \cdots & \sigma_{n}^n 
+        \end{bmatrix}\]
     }
     
     \subsection{Marginal Distribution}{
@@ -264,29 +248,49 @@ See notes in "Lecture 1".
         \[f_{x_{\sim}}(t_1, t_2, \cdots, t_n) = \int_{t_{k+1}, \cdots, t_n}^{\infty} f_{x_{\sim}}(t_1, \cdots, t_n)dt_{k+1}, \cdots, dt_n= \sum_{t_{k+1}}\sum_{t_{k+2}}\cdots \sum_{t_{n}}f_{x_{\sim}}(t_1,\cdots, t_n)\]
         
         Joint pdf: \(f(t_1, t_2)\)
-        
-        \paragraph{e.g. }{
-            Supposed that: $x_1 \rightarrow$ Height, $x_2 \rightarrow$ Gender,
-            \(\begin{cases} 0  & \text{male} \\ 
-            1& \text{female} \end{cases}\)
+    }
 
-            For $x_2= 0 \rightarrow \text{Height} \sim N(69,4.5) \Leftrightarrow f_{x_1|x_2}(t_1|t_2= 0)\phi( t_1|\phi=69, \sigma= 4.5)$\\
+    \subsection{Conditional Distribution (2 Vars)}{
+        \[\uwave{x}=(x_1, x_2) \rightarrow \text{ joint:} f(t_1,t_2)\]
+        Conditional distribution means: \(\mathit{f}_{x_1|x_2}(t_1|t_2=\mathit{a})\), \(\mathit{a}\) is a given constant, \(\mathit{x}_2\) is given, fixed.
 
-            For $x_2= 1 \rightarrow \text{Height} \sim N(65,4.2)\Leftrightarrow f_{x_1|x_2}(t_1|t_2= 1)\phi( t_1|\phi=65, \sigma= 4.2)$\\
+        \[f_{x_1|x_2}(t_1|t_2)=\frac{f_{x_{\sim}}(t_1,t_2)}{f_{x_2}(t_2)}\]
+        By defination, \(f_{x_{\sim}}(t_1,t_2)\) is joint distribution, \(f_{x_2}(t_2)\) is marginal distribution. And, we have,
+
+        \[f_{x_{\sim}}(t_1, t_2)=  f_{x_1|x_2}(t_1|t_2)f_{x_2}(t_2)\]
+        \[f_{x_2|x_1}(t_2|t_1)=\frac{f_{x_{\sim}}(t_1,t_2)}{f_{x_1}(t_1)}\]
+        \[f_{x_{\sim}}(t_1, t_2)=  f_{x_2|x_1}(t_2|t_1)f_{x_1}(t_1)\]
+
+        So, 
+        \[f_{x_1|x_2}(t_1|t_2)=\frac{f_{x_2|x_1}(t_2|t_1)f_{x_1}(t_1)}{f_{x_2}(t_2)} \rightarrow \text{Bayes Rule}\]
+    }
+    \paragraph{e.g. }{
+        Supposed that: $x_1 \rightarrow$ Height, $x_2 \rightarrow$ Gender,
+        \(\begin{cases} 0  & \text{male} \\ 
+        1& \text{female} \end{cases}\)
+
+        For $x_2= 0 \rightarrow \text{Height} \sim N(69,4.5) \Leftrightarrow f_{x_1|x_2}(t_1|t_2= 0)\phi( t_1|\phi=69, \sigma= 4.5)$\\
+
+        For $x_2= 1 \rightarrow \text{Height} \sim N(65,4.2)\Leftrightarrow f_{x_1|x_2}(t_1|t_2= 1)\phi( t_1|\phi=65, \sigma= 4.2)$\\
             
-            % Marginal distribution of height for people
-            % \[f_{x_1}(t_1)=f_{x_1|x_2}(t_1|t_2= 0)*f_{x_2}(0)+f_{x_1|x_2}(t_1|t_2= 1)*f_{x_2}(1)= \phi(t_1|69, 4.5)*0.5+\phi(t_2|65, 4.2)*0.5= \phi(t_1|\frac{69+65}{2},\sqrt{\frac{4.5^2+4.2^2}{2}} )\]
-        } 
-        
+        % Marginal distribution of height for people
+        % \[f_{x_1}(t_1)=f_{x_1|x_2}(t_1|t_2= 0)*f_{x_2}(0)+f_{x_1|x_2}(t_1|t_2= 1)*f_{x_2}(1)= \phi(t_1|69, 4.5)*0.5+\phi(t_2|65, 4.2)*0.5= \phi(t_1|\frac{69+65}{2},\sqrt{\frac{4.5^2+4.2^2}{2}} )\]
     }
+    \paragraph{e.g. }{
+        \begin{tabular}{l|*{4}r}
+            \hline
+            \diagbox{$x_2$}{$x_1$} & 1& 2 & 3 & $f_{x_2}(t)$\\
+            \hline
+            0 & 0.1 & 0.4 & 0.2 & 0.7 \\
+            \hline
+            1 & 0.2 & 0.05 & 0.05 & 0.3 \\
+            \hline
+            $f_{x_1}(t)$ &0.3 & 0.45 & 0.45 & \\
+        \end{tabular}
 
-    \subsection{Conditional Distribution in 2 Variables}{
-        $x=(x_1, x_2) \rightarrow$ joint  $f(t_1,t_2)$
-        \\$f_{x_1|x_2}(t_1|t_2)=\frac{ f_x(t_1,t_2)}{f_x(t_2)}$
-        \\$f_x(t_1, t_2)=  f_{x_1|x_2}(t_1|t_2)*f_{x_2}(t_2)$
-        \\$f_{x_2|x_1}(t_2|t_1)=\frac{ f_x(t_1,t_2)}{f_{x_1}(t_1)}$
-        \\$f_x(t_1, t_2)=  f_{x_2|x_1}(t_2|t_1)*f_{x_1}(t_1)$
-    }
+        \[P[x_2= 0] = P[x_2=0 \vert x_1=1]+P[x_2=0 \vert x_1=2]+P[x_2=0 \vert x_1=3]=0.7\]
+        \[P[x_2= 1] = 1 - P[x_2= 0] = 0.3\]
+    } 
 }
 % section Multivariate Distributions (end)
 

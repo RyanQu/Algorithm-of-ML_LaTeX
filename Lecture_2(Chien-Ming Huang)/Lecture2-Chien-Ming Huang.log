@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  16 FEB 2017 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  17 FEB 2017 12:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -630,21 +630,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5 <./Normal_distribution_pdf.png> <./Normal_distribution_CDF.png>]
-Overfull \hbox (72.64587pt too wide) detected at line 264
+Overfull \hbox (72.64587pt too wide) detected at line 248
 \U/eur/m/n/10 f[]\U/euf/m/n/10 (\U/eur/m/n/10 t[]; t[]; []  ; t[]\U/euf/m/n/10 
 ) = [][] \U/eur/m/n/10 f[]\U/euf/m/n/10 (\U/eur/m/n/10 t[]; []  ; t[]\U/euf/m/n
 /10 )\U/eur/m/n/10 dt[]; []  ; dt[] \U/euf/m/n/10 = [] [] [] [] \U/eur/m/n/10 f
 []\U/euf/m/n/10 (\U/eur/m/n/10 t[]; []  ; t[]\U/euf/m/n/10 )
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
-
  []
 
 
@@ -654,6 +644,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 22.54448pt.
@@ -661,7 +660,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-Overfull \hbox (39.05203pt too wide) in paragraph at lines 326--328
+Overfull \hbox (39.05203pt too wide) in paragraph at lines 330--332
 \U/eur/m/n/10 f\U/euf/m/n/10 (\U/eur/m/n/10 x\U/euf/m/n/10 ) = \U/eur/m/n/10 j$
 \OT1/cmr/m/n/10 , $\U/eur/m/n/10 E[]\U/euf/m/n/10 (\U/eur/m/n/10 loss\U/euf/m/n
 /10 (\U/eur/m/n/10 j \U/euf/m/n/10 = []\U/eur/m/n/10 ; x\U/eus/m/n/10 j\U/eur/m
@@ -682,7 +681,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Here is how much of TeX's memory you used:
  4233 strings out of 493013
  51816 string characters out of 6133343
- 139558 words of memory out of 5000000
+ 138558 words of memory out of 5000000
  7632 multiletter control sequences out of 15000+600000
  18035 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -712,7 +711,7 @@ pe1/public/amsfonts/euler/eusm5.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Lecture2-Chien-Ming Huang.pdf" (8 pages, 363274 bytes).
+Output written on "Lecture2-Chien-Ming Huang.pdf" (8 pages, 364539 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
