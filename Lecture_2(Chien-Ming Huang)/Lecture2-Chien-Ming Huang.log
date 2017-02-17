@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  17 FEB 2017 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.20)  17 FEB 2017 14:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -670,14 +670,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--316
  []
 
 
-Overfull \hbox (47.34283pt too wide) detected at line 347
+Overfull \hbox (62.27145pt too wide) detected at line 347
 \U/eur/m/n/10 f[]\U/euf/m/n/10 (\U/eur/m/n/10 t[] \U/euf/m/n/10 = \U/eur/m/n/10
  0\U/eus/m/n/10 j\U/eur/m/n/10 x[] \U/euf/m/n/10 = \U/eur/m/n/10 7; n \U/euf/m/
 n/10 = \U/eur/m/n/10 20\U/euf/m/n/10 ) = [] = [] = []
  []
 
 
-Overfull \hbox (45.5603pt too wide) detected at line 348
+Overfull \hbox (60.48892pt too wide) detected at line 348
 \U/eur/m/n/10 f[]\U/euf/m/n/10 (\U/eur/m/n/10 t[] \U/euf/m/n/10 = \U/eur/m/n/10
  1\U/eus/m/n/10 j\U/eur/m/n/10 x[] \U/euf/m/n/10 = \U/eur/m/n/10 7; n \U/euf/m/
 n/10 = \U/eur/m/n/10 20\U/euf/m/n/10 ) = [] = [] = []
@@ -690,6 +690,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 352--356
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--362
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 22.54448pt.
@@ -729,7 +743,7 @@ type1/public/amsfonts/euler/eusm5.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2016/texmf-dist/font
 s/type1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Lecture2-Chien-Ming Huang.pdf" (9 pages, 355327 bytes).
+Output written on "Lecture2-Chien-Ming Huang.pdf" (9 pages, 354700 bytes).
 PDF statistics:
  144 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream
