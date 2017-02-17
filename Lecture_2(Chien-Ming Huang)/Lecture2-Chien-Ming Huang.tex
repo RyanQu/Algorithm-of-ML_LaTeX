@@ -104,7 +104,7 @@ See notes in "Lecture 1".
     \subsection{Distribution Function}{
         \subsubsection{CDF: }{
             Cumulative Distribution Function\\
-            $ F_x(t)= P_r[x\le t]$, probability can only increase\\
+            $ F_x(t)= P[x\le t]$, probability can only increase\\
 
             \begin{enumerate}{
                 \item For Discrete:
@@ -125,7 +125,7 @@ See notes in "Lecture 1".
             
             \begin{enumerate}{
                 \item For Discrete:
-                    \[ x: F_x(t)= P_r[x= t] \]
+                    \[ x: F_x(t)= P[x= t] \]
                     \begin{center}{
                         \includegraphics[scale=0.3]{dis-pdf.jpg}
                     }
@@ -204,12 +204,11 @@ See notes in "Lecture 1".
 
 \section{Multivariate Distributions}{
     \subsection{Random Vector}{
-
         \(X_N=(x_1, x_2, \cdots x_N)\) can be continuous or discrete.
-        \[\text{CDF: } F_x(t_1, t_2, \cdots t_n)= P_r[x_1\leqslant t_1,x_2\leqslant t_2, \cdots, x_n\leqslant t_n]\]
+        \[\text{CDF: } F_x(t_1, t_2, \cdots t_n)= P[x_1\leqslant t_1,x_2\leqslant t_2, \cdots, x_n\leqslant t_n]\]
         \[\text{pdf: } \begin{cases}
             \frac{\partial}{\partial t_1 \partial t_2 \partial t_3 \cdots \partial t_n} F(t_1, t_2, \cdots t_n)= f_{\uwave{x}}(t_1, \cdots, t_n), & \text{all continuous}\\
-            P_r[x_1= t_1,x_2= t_2, \cdots, x_n= t_n]=f_{x}(t_1, \cdots, t_n), & \text{all discrete}
+            P[x_1= t_1,x_2= t_2, \cdots, x_n= t_n]=f_{x}(t_1, \cdots, t_n), & \text{all discrete}
         \end{cases}\]
         both are joint distribution R.V. $x_1, \cdots, x_n$
     }
@@ -263,45 +262,74 @@ See notes in "Lecture 1".
 
         So, 
         \[f_{x_1|x_2}(t_1|t_2)=\frac{f_{x_2|x_1}(t_2|t_1)f_{x_1}(t_1)}{f_{x_2}(t_2)} \rightarrow \text{Bayes Rule}\]
+
+        \paragraph{e.g. }{
+            \begin{tabular}{l|*{4}r}
+                \hline
+                \diagbox{$x_2$}{$x_1$} & 1& 2 & 3 & $f_{x_2}(t)$\\
+                \hline
+                0 & 0.1 & 0.4 & 0.2 & 0.7 \\
+                \hline
+                1 & 0.2 & 0.05 & 0.05 & 0.3 \\
+                \hline
+                $f_{x_1}(t)$ &0.3 & 0.45 & 0.45 & \\
+            \end{tabular}
+
+            \[P[x_2= 0] = P[x_2=0 \vert x_1=1]+P[x_2=0 \vert x_1=2]+P[x_2=0 \vert x_1=3]=0.7\]
+            \[P[x_2= 1] = 1 - P[x_2= 0] = 0.3\]
+        }
     }
-    \paragraph{e.g. }{
+}
+% section Multivariate Distributions (end)
+
+\section{Bayes Classification}{
+    \[f_{x_1|x_2}(t_1|t_2)=\frac{f_{x_2|x_1}(t_2|t_1)f_{x_1}(t_1)}{f_{x_2}(t_2)} \rightarrow \text{Bayes Rule}\]
+
+    For discrete: \(f_{x_2}(t_2)= \sum_{t_1}f_{x_2|x_1}(t_2|t_1)f_{x_1}(t_1)\)\\
+
+    For continuous: \(f_{x_2}(t_2)= \int_{-\infty}^{\infty}f_{x_2|x_1}(t_2|t_1)f_{y_1}(t_1)dt\)
+
+    \paragraph{e.g. Height}{
         Supposed that: $x_1 \rightarrow$ Height, $x_2 \rightarrow$ Gender,
         \(\begin{cases} 0  & \text{male} \\ 
         1& \text{female} \end{cases}\)
 
-        For $x_2= 0 \rightarrow \text{Height} \sim N(69,4.5) \Leftrightarrow f_{x_1|x_2}(t_1|t_2= 0)\phi( t_1|\phi=69, \sigma= 4.5)$\\
+        For \(x_2= 0 \rightarrow \text{Height} \sim N(69,4.5) \Leftrightarrow f_{x_1|x_2}(t_1|t_2= 0)\phi( t_1|\phi=69, \sigma= 4.5)\)\\
 
-        For $x_2= 1 \rightarrow \text{Height} \sim N(65,4.2)\Leftrightarrow f_{x_1|x_2}(t_1|t_2= 1)\phi( t_1|\phi=65, \sigma= 4.2)$\\
+        For \(x_2= 1 \rightarrow \text{Height} \sim N(65,4.2)\Leftrightarrow f_{x_1|x_2}(t_1|t_2= 1)\phi( t_1|\phi=65, \sigma= 4.2)\)\\
             
-        % Marginal distribution of height for people
-        % \[f_{x_1}(t_1)=f_{x_1|x_2}(t_1|t_2= 0)*f_{x_2}(0)+f_{x_1|x_2}(t_1|t_2= 1)*f_{x_2}(1)= \phi(t_1|69, 4.5)*0.5+\phi(t_2|65, 4.2)*0.5= \phi(t_1|\frac{69+65}{2},\sqrt{\frac{4.5^2+4.2^2}{2}} )\]
-    }
-    \paragraph{e.g. }{
-        \begin{tabular}{l|*{4}r}
-            \hline
-            \diagbox{$x_2$}{$x_1$} & 1& 2 & 3 & $f_{x_2}(t)$\\
-            \hline
-            0 & 0.1 & 0.4 & 0.2 & 0.7 \\
-            \hline
-            1 & 0.2 & 0.05 & 0.05 & 0.3 \\
-            \hline
-            $f_{x_1}(t)$ &0.3 & 0.45 & 0.45 & \\
-        \end{tabular}
+        Marginal distribution of height for people:
+        \[f_{x_1}(t_1)=f_{x_1|x_2}(t_1|t_2= 0)*f_{x_2}(0)+f_{x_1|x_2}(t_1|t_2= 1)*f_{x_2}(1)\]
+        \[= \phi(t_1|69, 4.5)\cdot 0.5+\phi(t_2|65, 4.2)*0.5\]
+        \[= \phi(t|\frac{69+65}{2},\sqrt{\frac{4.5^2+4.2^2}{2}} )\]
 
-        \[P[x_2= 0] = P[x_2=0 \vert x_1=1]+P[x_2=0 \vert x_1=2]+P[x_2=0 \vert x_1=3]=0.7\]
-        \[P[x_2= 1] = 1 - P[x_2= 0] = 0.3\]
+        A person has height 6'7", caculate the probability of each gender.
+        \[f(x_2= 0| x_1=67)=\frac{ f_{x_1|x_2}(67|x_2= 0)f_{x_2}(0)}{f_{x_1}(67)}=\frac{\phi(67|69,4.5)\cdot 0.5}{f_{x_1}(67)}\]
+        \[f(x_2= 1| x_1=67)=\frac{ f_{x_1|x_2}(67|x_2= 1)f_{x_2}(1)}{f_{x_1}(67)}=\frac{\phi(67|65,4.2)\cdot 0.5}{f_{x_1}(67)}\]
     } 
-}
-% section Multivariate Distributions (end)
 
-\section{Bayes} 
-\subsection{Bayes Formula} 
-$f_{x_1|x_2}(t_1|t_2)= \frac{ (f_{x_2|x_1}(t_2|t_1)*f_{x_1}(t_1))} {f_{x_2}(t_2)}$
-\\Discrete $x_1: f_{x_2}(t_2)= \sum_{t_1}f_{x_2|x_1}(t_2|t_1)*f_{x_1}(t_1)$
-\\Continuous $x_1: f_{x_2}(t_2)= \int_{-\infty}{\infty}f_{x_2|x_1}(t_2|t_1)*f_{y_1}(t_1)dt$
-\\Example: A person has height 6?7"
-\\$f(x_2= 0| x_1=6'7")=\frac{ f_{x_1|x_2}(6'7"|x_2= 0)*f_{x_2}(0)}{f_{x_1}(67)}$
-\\$f(x_2= 1| x_1=6'7")=\frac{ f_{x_1|x_2}(6'7"|x_2= 1)*f_{x_2}(0)}{f_{x_1}(67)}$
+    \[\text{Loss}(\hat{f}, \uwave{x}|f), \rightarrow \text{Minimum} E_x: Loss (\hat{f}|f)\]
+    Misclassification Rate: loss\((\hat{f}, \uwave{x}|f): \begin{cases} 
+        0, &\  f_x=\hat{f}(x) \\ 
+        1, &\  f_x \ne \hat{f}(x) 
+    \end{cases}\), Risk = \(E_x[loss(\hat{f}, \uwave{x}|f)]\)\\
+
+    Probability of Misclassification: \(E_x= \begin{cases}
+        \sum_{t_i}t_if_x(t_i), &\   \text{for discrete} \\
+        \int_{0}^{1}t\int_{x}(t)dt, &\  \text{for continuous}
+    \end{cases}\)
+
+    Bayes Classification Rule for Binary: choose $k$ that $P[y=k|\uwave{x}]$,
+    \[k= \underset{k}{\mathrm{argmax}}\frac{P[x|k]P[k]}{P[x]} \propto P[x|k]P[k]\]
+
+    For cost matrix C, assumed that
+    \[C_{ij}= \text{the cost of classification } i \text{by wrong classified in } j\]
+    \[E_x(loss(j=\hat{f}(x)|i)= \sum_{i=1}^{k}P[i|x]C_{ij} = \sum_{i=1}^{k}\frac{f(x|i)P[i]C_{ij}}{f_x} \cdot C_{ij}\]
+    \[ \propto \sum_{i=1}^{k}f(x|i)P[i]C_{ij}\]
+}
+
+us 
+\\
 \\Example: In a box $\frac{1}{4}$ of coins are fake, $\frac{3}{4} $ of coins are real
 \\The probability to get fake: $P_r[head]= \frac{1}{3}, P_r[tail]= \frac{2}{3} $
 \\The probability to get real: $P_r[head]= \frac{1}{2}, P_r[tail]= \frac{2}{2} $
@@ -313,22 +341,6 @@ $f_{x_1|x_2}(t_1|t_2)= \frac{ (f_{x_2|x_1}(t_2|t_1)*f_{x_1}(t_1))} {f_{x_2}(t_2)
 \\$f(t_2= 1|x_1=7, n= 20)=\frac{ f_{x_1|x_2}(7|real, n= 20)*f_{x_2}(1)}{f_{x_1}(7)}{20\choose 7}\frac{1}{2}^7\frac{1}{2}^13*0.75=0.55$	
 
 \subsection{Bayes Classfication} 	
-Loss($\hat{f}, \uwave{x}|f), y=f(x), y=\hat{f}(x)$ 
-\\Minimum $E_x: Loss (\hat{f}|f)$
-\\Misclassification Rate: Loss($\hat{f}, \uwave{x}|f): \begin{cases} 0 &\   f_x=\hat{f}(x) \\ 
-	1 &\  f_x \ne \hat{f}(x) \end{cases}$
-\\Risk = $E_x$ Loss($\hat{f}, \uwave{x}|f)$
-\\Probability of Misclassification: $E_x= \sum_{t_i}t_if_x(t_i)= \int_{0}^{1}t\int_{x}(t)dt$
-\\$x= \begin{cases} p  &\ 0 \\ 
-	1-p &\ 1 \end{cases}$
-	
-\subsection{Bayes Classification Rule} 	
-Binary choose k $P_r[y=k, \uwave{x}]$
-\\k= category= avemax$\frac{P_0[x|k]P_r[k]}{P_r[x]} \propto P_0[x|k]P_r[k]$
-
-\subsection{Classification Cost Matrix} 
-$C_{ij}$= cost of classification a+ number of classification of i + number of classification of j
-\\$f(x)=j$, $E_x(loss(j=\hat{j},x|i)= \sum_{i=1}^{k}P_r[i|x]C_{ij}= \sum_{i=1}^{k}\frac{f(x|i)P_r[i]C_{ij}}{f_x} \propto \sum_{i=1}^{k}f(x|i)P_r[i]C_{ij}$
 
 \subsection{Modify Bayes Rule(Uneven Cost)} 
 $c= avgmin\sum_{i=1}^{k}f(x|i)P_r[i]C_{ij}$
