@@ -50,6 +50,25 @@ This document introduces k-Nearest Neighbor (k-NN) method and discusses the foll
     \item Issue with high number of features
 \end{enumerate}
 
+\begin{enumerate}
+    \item k-NN
+        \item Overview
+        \item Application Methods
+            \item For Bayes
+            \item For Regression
+        \item Properties
+            \item Non-parametric
+            \item Distance
+                \item Eucliden distance
+                \item Mahatten distance
+                \item Minkowski distance
+                \item Hamming distance
+                \item Voronoi diagram
+                \item k-d tree
+            \item Standardization
+        \item Validation （in Lecture 4)
+\end{enumerate}
+
 \section{Overview} %give a one paragraph short description of the topics
 k-NN as the name suggests, takes k nearest points in the available data set to the desired new point, averages the responses for those points and reports that as the response at the new point. To better visualize this, consider an example of a classification problem with two features denoted by $x_1$ and $x_2$ and two classes denoted by blue and black color as shown in Figure \ref{Fig.1}. The problem is to classify the new point (the point denoted in red color) as blue or black. For illustration, consider $k = 3$ i.e. consider three nearest neighbors to the new point. Three points shown in the circle are found to be closest to the new point and two of these neighboring points are blue and one is black. Taking average of three points, the new point is 2/3rd likely to be blue and 1/3rd likely to be black. Therefore,the k-NN algorithm classifies the new point as blue. One small point to notice here is that the class reported based on k-NN is the class that has maximum value and does not take in to consideration the magnitude by which that class is favored over the other class.
 
