@@ -205,6 +205,14 @@ This lecture introduces k-Nearest Neighbor (k-NN) method and discusses the follo
                     \caption{Voronoi diagram example}
                 \end{center}
             \end{figure}
+
+            The complexity of k-NN algorithm is same to Voronoi Diagram for $k$ dimensions.
+
+            In 2 dimension, the case of Voronoi Diagram, using efficient data structures such as a binary search tree to find the nearest neighbors, it can be shown that the computational efforts involved are proportional to depth of the tree which is \(\approx \log(N)\) where $N$ is the number of data points or nodes stored in the tree. 
+
+            Extending this concept to multiple dimensions, one can use k-d tree. Given a balanced binary tree (starting from the median for example), it can be shown that the computational complexity is of the order $kp\log(N)$ where, $k$ is the number of classes, $p$ is the number of features and $N$ is the number of data points. 
+
+            With this analysis, one can comment on the limitations and applicability of k-NN. The method is clearly effective if $k$ and $p$ is small compared to number of data points $N$. This makes it extremely effective for on-line learning. Additionally, it is clear that k-NN is not effective if number of features is large. 
         }
 
         \paragraph{High dimension distance}{
@@ -218,22 +226,36 @@ This lecture introduces k-Nearest Neighbor (k-NN) method and discusses the follo
         }
     }
     \subsection{Standardization}{
+        \paragraph{e.g. Scale dependence}{
+            Given 3 data points, which describe the age and salary, as follows:
 
+            $a$ = (45, \$76000), $b$ = (25, \$75000), $c$ = (42, \$78000). 
+
+            If we choose Eucliden distance as the measure, \(\mathrm{d}(a, b) = \|a - b\| = \sqrt{\mathrm{20^2} + \mathrm{1000^2}} \approx 1000\). Similarly, $\mathrm{d}(b,c) \approx$ 3000 and $\mathrm{d}(a,c) \approx$ 2000.
+
+            Changing the scale of salary by a factor of 1000, then the distance can be written in $\mathrm{d}(a, b) = \|a - b\| = \sqrt{\mathrm{20}^2 + \mathrm{1}^2} \approx$ 20. Similarly, $\mathrm{d}(b,c) \approx$ 17 and $\mathrm{d}(a, c) \approx$ 3.6.
+
+            Thus, scale in which data is reported can affect selection of nearest points and this makes outcome of k-NN scale dependent. 
+        }
+        Assuming that the data roughly follows a normal distribution, 
+
+        \[\utilde{x} \rightarrow x_1, x_2,\cdots,x_n\] 
+
+        Standardize: \(x_k = \frac{x_k - \bar{X}}{s}\) 
+
+        where \(\bar{X} =\frac{\sum_{i=1}^{n}x_i}{n}\) is the mean, and \(s = \frac{\sqrt{\sum_{i=1}^{n}(x_i - \bar{X})^2}}{n-1}\) is the standard deviation.
+
+        One point notice in case of this standardization is that this approach is effective only when features are completely independent of each other. If the features are correlated, one might end up overemphasizing some of the features and under-emphasizing some. 
+
+        To avoid this, use of a covariance matrix is suggested. Covariance matrix $\mathbb{S}$ is defined as \[\mathbb{S}_{ij} = \sum_l(x_{il} - \bar{x_i})(x_{jl} - \bar{x_j})\]
+        \[x_i \rightarrow (x_i - \bar{X}\cdot \utilde{i})^T\mathbb{S}^{-1} (x_i - \bar{X}\cdot \utilde{i})\]. 
+
+        In which use \(\bar{X}\cdot \utilde{i}\) to vectorize the \(\bar{X}\).
+
+        Therefore, \(d(a, b) = \sqrt{(a - b)^T \mathbb{S}^{-1}(a - b)}\). 
+
+        If the correlation is large intuitively, \(\mathbb{S}^{-1}\) becomes small and it weighs down the distance. As a result of these computations, evaluating \(\hat{f}\) at a new point is expensive.
     }
 }
-
-
-\subsubsection{Scale dependence}
-Second issue arises from the scale dependence of distance irrespective of the way we define distance. To illustrate this, a simple example of three points is considered. Given three data points as follows:
-$a$ = (45, \$76000), $b$ = (25, \$75000), $c$ = (42, \$78000). Distance between points $a$ and $b$ can be written as $\mathrm{d}(a, b) = \|a - b\| = \sqrt{\mathrm{20^2} + \mathrm{1000^2}} \approx$ 1000. Similarly, $\mathrm{d}(b,c) \approx$ 3000 and $\mathrm{d}(a,c) \approx$ 2000. Changing the scale of second co-ordinate by a factor of 1000, one can write the same distance as $\mathrm{d}(a, b) = \|a - b\| = \sqrt{\mathrm{20}^2 + \mathrm{1}^2} \approx$ 20, $\mathrm{d}(b,c) \approx$ 17 and $\mathrm{d}(a, c) \approx$ 3.6. As it can be seen clearly, that by changing the scale, now $c$ is closer to $a$ than $b$ unlike the previous case. Thus, scale in which data is reported can affect selection of nearest points and this makes outcome of k-NN scale dependent. 
-
-There are solutions to avoid issues with scale dependence such as standardizing the data and it is important to get a brief idea about how it can be helpful. Assuming that the data roughly follows a normal distribution we transform data $\utilde{x} \rightarrow X_1, X_2,\dots{.},X_N$ to obtain a standardized data using $X_k = \frac{X_1 - \bar{X}}{s}$ where $\bar{X} = \frac{X_1 + X_2 + \dots{.} + X_N}{N}$ which is mean and $s = \frac{\sqrt{(X_1 - \bar{X})^2 + \dots{.} + (X_N - \bar{X})^2}}{N-1}$ which is standard deviation. One point notice in case of this standardization is that this approach is effective only when features are completely independent of each other. If the features are correlated, one might end up overemphasizing some of the features and under-emphasizing some. To avoid this, use of a covariance matrix is suggested. Covariance matrix $\mathbb{S}$ is defined as $\mathbb{S}_{ij} = \sum_l(x_{il} - \bar{x_i})(x_{jl} - \bar{x_j})$. This implies that $X_i \rightarrow (X_i - \bar{X}1)^T\mathbb{S}^{-1} (X_i - \bar{X}1)$. Therefore, $d(a, b) = \sqrt{(a - b)^T \mathbb{S}^{-1}(a - b)}$. To put it simply, if the correlation is large intuitively, $\mathbb{S}^{-1}$ becomes small and it weighs down the distance. As a result of these computations, evaluating $\hat{f}$ at a new point is expensive.
-
-
-
-\section{Computational complexity of k-NN}
-Using efficient data structures such as a binary search tree to find the nearest neighbors, it can be shown that the computational efforts involved are proportional to depth of the tree which is $\approx \log(N)$ where $N$ is the number of data points or nodes stored in the tree. Extending this concept to multiple dimensions, one can use kd-tree. Given a balanced binary tree (starting from the median for example), it can be shown that the computational complexity is of the order $kp\log(N)$ where, $k$ is the number of classes, $p$ is the number of features and $N$ is the number of data points. 
-
-With this analysis, one can comment on the limitations and applicability of k-NN. The method is clearly effective if $k$ and $p$ is small compared to number of data points $N$. This makes it extremely effective for on-line learning. Additionally, it is clear that k-NN is not effective if number of features is large. 
 
 \end{document}
