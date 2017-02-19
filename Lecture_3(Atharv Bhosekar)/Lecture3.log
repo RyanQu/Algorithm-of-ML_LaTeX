@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.17)  18 FEB 2017 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.17)  19 FEB 2017 11:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -398,11 +398,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (11.76688pt too wide) in paragraph at lines 102--103
+[]\OT1/cmr/m/n/10 The prob-lem is to find the out-put $\U/eur/m/n/10 y[]$ \OT1/
+cmr/m/n/10 for a new in-put $\U/eur/m/n/10 x[] \U/euf/m/n/10 = (\U/eur/m/n/10 x
+[]; x[]; []  ; x[]\U/euf/m/n/10 )$\OT1/cmr/m/n/10 .
+ []
+
 <classificationkNN.PNG, id=10, 384.6872pt x 322.20375pt>
 File: classificationkNN.PNG Graphic file (type png)
 
 <use classificationkNN.PNG>
-Package pdftex.def Info: classificationkNN.PNG used on input line 86.
+Package pdftex.def Info: classificationkNN.PNG used on input line 122.
 (pdftex.def)             Requested size: 192.34312pt x 161.10147pt.
 
 
@@ -413,22 +419,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
- <./classificationkNN.PNG>]
+] [3 <./classificationkNN.PNG>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ¢ in font cmr10!
- [3]
-<voronoiExample.PNG, id=29, 279.29344pt x 274.02374pt>
+ [4]
+<voronoiExample.PNG, id=36, 279.29344pt x 274.02374pt>
 File: voronoiExample.PNG Graphic file (type png)
 
 <use voronoiExample.PNG>
-Package pdftex.def Info: voronoiExample.PNG used on input line 120.
+Package pdftex.def Info: voronoiExample.PNG used on input line 157.
 (pdftex.def)             Requested size: 139.64638pt x 137.01154pt.
- [4] [5 <./voronoiExample.PNG>] (./Lecture3.aux) ) 
+ [5 <./voronoiExample.PNG>] [6] (./Lecture3.aux) ) 
 Here is how much of TeX's memory you used:
  3131 strings out of 493013
  38026 string characters out of 6133343
- 103837 words of memory out of 5000000
+ 104837 words of memory out of 5000000
  6598 multiletter control sequences out of 15000+600000
  17231 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -451,11 +457,12 @@ onts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2016/texmf-dist
 /fonts/type1/public/amsfonts/euler/eurm5.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2016/texmf-di
 st/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Lecture3.pdf (5 pages, 252065 bytes).
+dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Lecture3.pdf (6 pages, 257897 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
