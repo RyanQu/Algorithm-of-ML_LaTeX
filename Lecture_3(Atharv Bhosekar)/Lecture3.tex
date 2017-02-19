@@ -136,9 +136,16 @@ This lecture introduces k-Nearest Neighbor (k-NN) method and discusses the follo
 
 \section{Application Methods}{
     \subsection{k-NN for Bayes}{
-        Relating this concept to the Bayes' decision rule, with a vector of features $\utilde{x} = (x_1, x_2, \dots, x_p)$ where $p$ is the number of features. The problem is to find $Y_{\mathrm{new}} = \underset{y}{\mathrm{argmax}}\, Pr[Y|\, \utilde{x}_{\mathrm{new}}]$. To put it in words, given a new point $x$ the problem is to find the probability that it belongs to class black or blue or any other class name relevant to the problem. The problem however is that we have no information about the probability.
+        Considering Bayes' decision rule, with a vector of features \(\utilde{x} = (x_1, x_2, \dots, x_p)\), where $p$ is the number of features. The problem is to find \[y_{\mathrm{new}} = \underset{y}{\mathrm{argmax}}\, P[y|\, \utilde{x}_{\mathrm{new}}]\]
 
-        k-NN solves this problem by implicitly making two assumptions. First, it replaces $x_{\mathrm{new}}$ with k- neighbors of $x_{\mathrm{new}}$. Second, it approximates probability of the entire population by sample proportion which is said to be approximately equal to the proportion in the neighborhood of each class.
+        To put it in words, given a new point $x$, the problem is to find the probability that it belongs to the class relevant to the problem. But the probability may be uncomputable because of infinity of points.
+
+        k-NN solves this problem by making two assumptions. 
+        \begin{enumerate}
+            \item Replace \(\utilde{x}_{\mathrm{new}}\) with k-neighbors of \(x_{\mathrm{new}}\). 
+            \item Approximates \(P \approx \) proportion of the neighborhood in each class.
+        \end{enumerate}
+        
     }
     \subsection{k-NN for regression}{
         Similar to classification, k-NN for regression is analogous to Bayes' decision rule for regression. Looking back at classification, the classification rule is obtained by minimizing loss function that quantifies misclassification. In case of regression, usually the loss function is defined as $\mathrm{loss}(x, \hat{f}|\,f) = (f(x) - \hat{f}(x))^2$ which is sum of squared errors. Our aim is to minimize the expected loss given by $\mathrm{risk}(\hat{f}|\,f) = \mathbb{E}_x(f(x) - \hat{f}(x))^2$. Assuming we have the entire population, best $\hat{f}$ is given by $\hat{f} = \mathbb{E}_x(y)$, which is the average of all possible values of $y$.
