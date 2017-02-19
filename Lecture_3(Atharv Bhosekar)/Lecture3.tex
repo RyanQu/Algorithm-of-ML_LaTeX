@@ -55,8 +55,8 @@ This lecture introduces k-Nearest Neighbor (k-NN) method and discusses the follo
     \item Overview
     \item Application Methods
         \begin{enumerate}
-            \item For Bayes
-            \item For Regression
+            \item k-NN for Bayes
+            \item k-NN for regression
         \end{enumerate}
     \item Properties
         \begin{enumerate}
@@ -77,61 +77,77 @@ This lecture introduces k-Nearest Neighbor (k-NN) method and discusses the follo
 
 \clearpage 
 
-\section{Overview}
-k-NN, a classification method, as the name suggests, takes k nearest points in the available data set to the desired new point, averages the responses for those points and reports that as the response at the new point. 
+\section{Overview}{
+    k-NN, a classification method, as the name suggests, takes k nearest points in the available data set to the desired new point, averages the responses for those points and reports that as the response at the new point. 
 
-Supposed that we have a data set following:
+    Supposed that we have a data set following:
 
-\begin{center}{
-    \begin{tabular}{c|c c c c }
+    \begin{center}{
+        \begin{tabular}{c|c c c c }
 
-        $y$ & $x_1$ & $x_2$ & ... & $x_p$ \\
-        \hline
-        $y_1$ & $x_{11}$ & $x_{12}$ & ... & $x_{1p}$ \\
-        
-        $y_2$ & $x_{21}$ & $x_{22}$ & ... & $x_{2p}$ \\
-        
-        ... & ... & ... & ... & ... \\
-        
-        $y_n$ & $x_{n1}$ & $x_{n2}$ & ... & $x_{np}$ \\
-        
-    \end{tabular}
-}
-\end{center}
-
-The problem is to find the output $y_{new}$ for a new input \(x_{new}=(x_1,x_2, \cdots,x_p)\). k-NN method suggests that:
-
-\[y_{new}=\frac{\sum y \text{ of } k \text{ nearest points}}{k}\]
-
-\[\Rightarrow P[y_{new}=i]=\frac{\text{number of } y_j=i}{k}, j=1,2,\cdots,k\]
-
-In two demension, if there are two classes, \(y=0\) and \(y=1\), so:
-
-\[P[y=0|x]=\frac{f_{x|y}(t|0)P[0]}{f_x(t)}\]
-
-If $x$ is in IID (Independent and Indentical distribution), we have:
-
-\[f_{x|y}(t|0)\approx \frac{f(t_{[1]}|0)+\cdots+f(t_{[k]}|0)}{k}, t_{[i]} \text{ is the $i$th closest number to the $t$}\]
-
-To better visualize this, consider an example of a classification problem with two features denoted by $x_1$ and $x_2$ and two classes denoted by blue and black color as shown in Figure \ref{Fig.1}. The problem is to classify the new point (the point denoted in red color) as blue or black. For illustration, consider $k = 3$ i.e. consider three nearest neighbors to the new point. Three points shown in the circle are found to be closest to the new point and two of these neighboring points are blue and one is black. Taking average of three points, the new point is 2/3rd likely to be blue and 1/3rd likely to be black. Therefore,the k-NN algorithm classifies the new point as blue. One small point to notice here is that the class reported based on k-NN is the class that has maximum value and does not take in to consideration the magnitude by which that class is favored over the other class.
-
-Relating this concept to the Bayes' decision rule, with a vector of features $\utilde{x} = (x_1, x_2, \dots, x_p)$ where $p$ is the number of features. The problem is to find $Y_{\mathrm{new}} = \underset{y}{\mathrm{argmax}}\, Pr[Y|\, \utilde{x}_{\mathrm{new}}]$. To put it in words, given a new point $x$ the problem is to find the probability that it belongs to class black or blue or any other class name relevant to the problem. The problem however is that we have no information about the probability.
-
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.5]{classificationkNN.PNG}
-        \caption{Example of a 2 feature 2 class classification problem. Red point shows the point to be classified. Points in the red dotted circle denote 3 nearest neighbors.}
+            $y$ & $x_1$ & $x_2$ & ... & $x_p$ \\
+            \hline
+            $y_1$ & $x_{11}$ & $x_{12}$ & ... & $x_{1p}$ \\
+            
+            $y_2$ & $x_{21}$ & $x_{22}$ & ... & $x_{2p}$ \\
+            
+            ... & ... & ... & ... & ... \\
+            
+            $y_n$ & $x_{n1}$ & $x_{n2}$ & ... & $x_{np}$ \\
+            
+        \end{tabular}
+    }
     \end{center}
-    \label{Fig.1}
-\end{figure}
 
-k-NN solves this problem by implicitly making two assumptions. First, it replaces $x_{\mathrm{new}}$ with k- neighbors of $x_{\mathrm{new}}$. Second, it approximates probability of the entire population by sample proportion which is said to be approximately equal to the proportion in the neighborhood of each class.
+    The problem is to find the output $y_{new}$ for a new input \(x_{new}=(x_1,x_2, \cdots,x_p)\). k-NN method suggests that:
+
+    \[y_{new}=\frac{\sum y \text{ of } k \text{ nearest points}}{k}\]
+
+    \[\Rightarrow P[y_{new}=i]=\frac{\text{number of } y_j=i}{k}, j=1,2,\cdots,k\]
+
+    In two demension, if there are two classes, \(y=0\) and \(y=1\), so:
+
+    \[P[y=0|x]=\frac{f_{x|y}(t|0)P[0]}{f_x(t)}\]
+
+    If $x$ is in IID (Independent and Indentical distribution), we have:
+
+    \[f_{x|y}(t|0)\approx \frac{f(t_{[1]}|0)+\cdots+f(t_{[k]}|0)}{k}, t_{[i]} \text{ is the $i$th closest number to the $t$}\]
+
+    \paragraph{e.g. }{
+        To better visualize this, consider an example of a classification problem with two features, $x_1$ and $x_2$, and two classes, blue and black, as shown in Figure \ref{Fig.1}. 
+
+        \begin{figure}
+            \label{Fig.1}
+            \begin{center}
+                \includegraphics[scale=0.5]{classificationkNN.PNG}
+                \caption{Example of a 2 feature 2 class classification problem. Red point shows the point to be classified. Points in the red dotted circle denote 3 nearest neighbors.}
+            \end{center} 
+        \end{figure}
+
+        The problem is to classify the new point (the red point) as blue or black. 
+
+        For illustration, consider $k = 3$ i.e. consider three nearest neighbors to the new point. 
+
+        Three points shown in the circle are found to be closest to the new point, 2 blue 1 black. Taking average of three points, the new point is 2/3rd likely to be blue and 1/3rd likely to be black. Therefore,the k-NN algorithm classifies the new point as blue. 
+
+        (some question about it) One small point to notice here is that the class reported based on k-NN is the class that has maximum value and does not take in to consideration the magnitude by which that class is favored over the other class.
+    }
+}
+
+\section{Application Methods}{
+    \subsection{k-NN for Bayes}{
+        Relating this concept to the Bayes' decision rule, with a vector of features $\utilde{x} = (x_1, x_2, \dots, x_p)$ where $p$ is the number of features. The problem is to find $Y_{\mathrm{new}} = \underset{y}{\mathrm{argmax}}\, Pr[Y|\, \utilde{x}_{\mathrm{new}}]$. To put it in words, given a new point $x$ the problem is to find the probability that it belongs to class black or blue or any other class name relevant to the problem. The problem however is that we have no information about the probability.
+
+        k-NN solves this problem by implicitly making two assumptions. First, it replaces $x_{\mathrm{new}}$ with k- neighbors of $x_{\mathrm{new}}$. Second, it approximates probability of the entire population by sample proportion which is said to be approximately equal to the proportion in the neighborhood of each class.
+    }
+    \subsection{k-NN for regression}{
+        Similar to classification, k-NN for regression is analogous to Bayes' decision rule for regression. Looking back at classification, the classification rule is obtained by minimizing loss function that quantifies misclassification. In case of regression, usually the loss function is defined as $\mathrm{loss}(x, \hat{f}|\,f) = (f(x) - \hat{f}(x))^2$ which is sum of squared errors. Our aim is to minimize the expected loss given by $\mathrm{risk}(\hat{f}|\,f) = \mathbb{E}_x(f(x) - \hat{f}(x))^2$. Assuming we have the entire population, best $\hat{f}$ is given by $\hat{f} = \mathbb{E}_x(y)$, which is the average of all possible values of $y$.
+
+        Two assumptions that k-NN makes implicitly for the case of classification are made even for the case of regression. For example, $x_{\mathrm{new}}$ is replaced by k closest data points $x_i$ and average of all $y$ responses at $x_{\mathrm{new}}$ are approximated by responses at k nearest neighbors.
+    }
+}
 
 
-
-\section{k-NN for regression}
-Similar to classification, k-NN for regression is analogous to Bayes' decision rule for regression. Looking back at classification, the classification rule is obtained by minimizing loss function that quantifies misclassification. In case of regression, usually the loss function is defined as $\mathrm{loss}(x, \hat{f}|\,f) = (f(x) - \hat{f}(x))^2$ which is sum of squared errors. Our aim is to minimize the expected loss given by $\mathrm{risk}(\hat{f}|\,f) = \mathbb{E}_x(f(x) - \hat{f}(x))^2$. Assuming we have the entire population, best $\hat{f}$ is given by $\hat{f} = \mathbb{E}_x(y)$, which is the average of all possible values of $y$.
-Two assumptions that k-NN makes implicitly for the case of classification are made even for the case of regression. For example, $x_{\mathrm{new}}$ is replaced by k closest data points $x_i$ and average of all $y$ responses at $x_{\mathrm{new}}$ are approximated by responses at k nearest neighbors.
 
 \section{Key features of k-NN}
 k-NN is a purely non-parametric method. This can be derived from the observation that the loss function in case of both classification as well as regression does not make any assumption on the nature of surrogate function $\hat{f}$.

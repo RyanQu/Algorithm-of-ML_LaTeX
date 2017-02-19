@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.17)  19 FEB 2017 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.17)  19 FEB 2017 12:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -404,6 +404,9 @@ cmr/m/n/10 for a new in-put $\U/eur/m/n/10 x[] \U/euf/m/n/10 = (\U/eur/m/n/10 x
 []; x[]; []  ; x[]\U/euf/m/n/10 )$\OT1/cmr/m/n/10 .
  []
 
+
+LaTeX Warning: Reference `Fig.1' on page 2 undefined on input line 117.
+
 <classificationkNN.PNG, id=10, 384.6872pt x 322.20375pt>
 File: classificationkNN.PNG Graphic file (type png)
 
@@ -424,42 +427,52 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ¢ in font cmr10!
  [4]
-<voronoiExample.PNG, id=36, 279.29344pt x 274.02374pt>
+
+LaTeX Warning: Reference `Fig.2' on page 5 undefined on input line 170.
+
+<voronoiExample.PNG, id=35, 279.29344pt x 274.02374pt>
 File: voronoiExample.PNG Graphic file (type png)
 
 <use voronoiExample.PNG>
-Package pdftex.def Info: voronoiExample.PNG used on input line 157.
+Package pdftex.def Info: voronoiExample.PNG used on input line 173.
 (pdftex.def)             Requested size: 139.64638pt x 137.01154pt.
- [5 <./voronoiExample.PNG>] [6] (./Lecture3.aux) ) 
+ [5 <./voronoiExample.PNG>] [6] (./Lecture3.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  3131 strings out of 493013
  38026 string characters out of 6133343
- 104837 words of memory out of 5000000
+ 103821 words of memory out of 5000000
  6598 multiletter control sequences out of 15000+600000
  17231 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,43p,1337b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/public/amsfonts/euler/euex10.pfb></usr/local/texlive/2016/texmf-dist/fonts
-/type1/public/amsfonts/euler/euex7.pfb></usr/local/texlive/2016/texmf-dist/font
-s/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2016/texmf-dist/f
-onts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2016/texmf-dist
-/fonts/type1/public/amsfonts/euler/eurm5.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Lecture3.pdf (6 pages, 257897 bytes).
+ 39i,10n,43p,1337b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/euex7.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eurm5.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb>
+Output written on Lecture3.pdf (6 pages, 259139 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
